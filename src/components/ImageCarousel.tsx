@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -32,9 +32,18 @@ const images = [
   carousel10,
 ];
 
+const AUTOPLAY_INTERVAL = 4000;
+
 const ImageCarousel = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const scrollNext = useCallback(() => {
+    if (api) {
+      api.scrollNext();
+    }
+  }, [api]);
 
   useEffect(() => {
     if (!api) return;
@@ -46,8 +55,25 @@ const ImageCarousel = () => {
     });
   }, [api]);
 
+  // Autoplay
+  useEffect(() => {
+    if (!api || isPaused) return;
+
+    const interval = setInterval(() => {
+      scrollNext();
+    }, AUTOPLAY_INTERVAL);
+
+    return () => clearInterval(interval);
+  }, [api, isPaused, scrollNext]);
+
   return (
-    <div className="w-full opacity-0 animate-fade-in-up animation-delay-700">
+    <div 
+      className="w-full opacity-0 animate-fade-in-up animation-delay-700"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onTouchStart={() => setIsPaused(true)}
+      onTouchEnd={() => setIsPaused(false)}
+    >
       <Carousel
         setApi={setApi}
         opts={{
