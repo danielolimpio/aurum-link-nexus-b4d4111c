@@ -82,7 +82,7 @@ const ImageCarousel = () => {
                 <img
                   src={image}
                   alt={`AURUM Content ${index + 1}`}
-                  className="w-full aspect-square object-cover"
+                  className="w-full h-auto object-contain"
                 />
                 
                 {/* Reflection effect */}
