@@ -1,6 +1,6 @@
 import { useState } from "react";
 import aurumLogo from "@/assets/aurum-logo.jpg";
-import blockchainBanner from "@/assets/blockchain-banner.jpg";
+import blockchainBanner from "@/assets/aurum-banner.jpg";
 import StoriesViewer from "./StoriesViewer";
 
 const ProfileHeader = () => {
