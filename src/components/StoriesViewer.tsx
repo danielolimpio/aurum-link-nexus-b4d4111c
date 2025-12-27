@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 
 import story1 from "@/assets/stories/story-1.jpg";
 import story2 from "@/assets/stories/story-2.jpg";
@@ -94,12 +94,14 @@ const StoriesViewer = ({ isOpen, onClose }: StoriesViewerProps) => {
         ))}
       </div>
 
-      {/* Close button */}
+      {/* Back button */}
       <button
         onClick={onClose}
-        className="absolute top-10 right-4 z-10 p-2 text-white/80 hover:text-white transition-colors"
+        className="absolute top-10 left-4 z-10 p-2 text-white/80 hover:text-white transition-colors flex items-center gap-2"
+        aria-label="Voltar"
       >
-        <X size={28} />
+        <ArrowLeft size={28} />
+        <span className="text-sm font-medium">Voltar</span>
       </button>
 
       {/* Story image */}

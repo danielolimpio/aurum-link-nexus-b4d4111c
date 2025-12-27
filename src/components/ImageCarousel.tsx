@@ -1,0 +1,118 @@
+import { useEffect, useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+
+import carousel1 from "@/assets/carousel/carousel-1.webp";
+import carousel2 from "@/assets/carousel/carousel-2.webp";
+import carousel3 from "@/assets/carousel/carousel-3.webp";
+import carousel4 from "@/assets/carousel/carousel-4.webp";
+import carousel5 from "@/assets/carousel/carousel-5.webp";
+import carousel6 from "@/assets/carousel/carousel-6.webp";
+import carousel7 from "@/assets/carousel/carousel-7.webp";
+import carousel8 from "@/assets/carousel/carousel-8.webp";
+import carousel9 from "@/assets/carousel/carousel-9.webp";
+import carousel10 from "@/assets/carousel/carousel-10.webp";
+
+const images = [
+  carousel1,
+  carousel2,
+  carousel3,
+  carousel4,
+  carousel5,
+  carousel6,
+  carousel7,
+  carousel8,
+  carousel9,
+  carousel10,
+];
+
+const ImageCarousel = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
+  return (
+    <div className="w-full opacity-0 animate-fade-in-up animation-delay-700">
+      <Carousel
+        setApi={setApi}
+        opts={{
+          align: "center",
+          loop: true,
+        }}
+        className="w-full"
+      >
+        <CarouselContent className="-ml-2 md:-ml-4">
+          {images.map((image, index) => (
+            <CarouselItem
+              key={index}
+              className="pl-2 md:pl-4 basis-[75%] md:basis-[45%]"
+            >
+              <div
+                className={`relative overflow-hidden rounded-2xl transition-all duration-500 ease-out ${
+                  current === index
+                    ? "scale-100 opacity-100 shadow-2xl shadow-primary/20"
+                    : "scale-90 opacity-50"
+                }`}
+              >
+                {/* Glow effect */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-aurum-cyan/30 opacity-0 transition-opacity duration-500 ${
+                    current === index ? "opacity-100" : ""
+                  }`}
+                />
+                
+                {/* Shimmer effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                
+                <img
+                  src={image}
+                  alt={`AURUM Content ${index + 1}`}
+                  className="w-full aspect-square object-cover"
+                />
+                
+                {/* Reflection effect */}
+                <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent" />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        
+        <CarouselPrevious className="left-2 bg-background/80 backdrop-blur-sm border-border/50 hover:bg-background hover:border-primary/50 transition-all duration-300" />
+        <CarouselNext className="right-2 bg-background/80 backdrop-blur-sm border-border/50 hover:bg-background hover:border-primary/50 transition-all duration-300" />
+      </Carousel>
+
+      {/* Dots indicator */}
+      <div className="flex justify-center gap-1.5 mt-4">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => api?.scrollTo(index)}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              current === index
+                ? "w-6 bg-primary"
+                : "w-1.5 bg-muted-foreground/30 hover:bg-muted-foreground/50"
+            }`}
+            aria-label={`Ir para imagem ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ImageCarousel;
