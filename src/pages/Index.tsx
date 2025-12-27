@@ -103,7 +103,15 @@ const Index = () => {
 
           {/* Footer */}
           <p className="text-center text-muted-foreground/50 text-xs mt-12">
-            © {new Date().getFullYear()} AURUM Foundation. Todos os direitos reservados.
+            © {new Date().getFullYear()} AURUM Foundation | Todos os direitos reservados | Desenvolvido por{" "}
+            <a 
+              href="https://danielolimpio.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary/70 hover:text-primary transition-colors underline underline-offset-2"
+            >
+              DanielOlimpio
+            </a>
           </p>
         </div>
       </main>
