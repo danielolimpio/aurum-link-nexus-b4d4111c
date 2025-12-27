@@ -18,6 +18,16 @@ import carousel7 from "@/assets/carousel/carousel-7.webp";
 import carousel8 from "@/assets/carousel/carousel-8.webp";
 import carousel9 from "@/assets/carousel/carousel-9.webp";
 import carousel10 from "@/assets/carousel/carousel-10.webp";
+import carousel11 from "@/assets/carousel/carousel-11.webp";
+import carousel12 from "@/assets/carousel/carousel-12.webp";
+import carousel13 from "@/assets/carousel/carousel-13.webp";
+import carousel14 from "@/assets/carousel/carousel-14.webp";
+import carousel15 from "@/assets/carousel/carousel-15.webp";
+import carousel16 from "@/assets/carousel/carousel-16.webp";
+import carousel17 from "@/assets/carousel/carousel-17.webp";
+import carousel18 from "@/assets/carousel/carousel-18.webp";
+import carousel19 from "@/assets/carousel/carousel-19.webp";
+import carousel20 from "@/assets/carousel/carousel-20.webp";
 
 const images = [
   carousel1,
@@ -30,6 +40,16 @@ const images = [
   carousel8,
   carousel9,
   carousel10,
+  carousel11,
+  carousel12,
+  carousel13,
+  carousel14,
+  carousel15,
+  carousel16,
+  carousel17,
+  carousel18,
+  carousel19,
+  carousel20,
 ];
 
 const AUTOPLAY_INTERVAL = 4000;
