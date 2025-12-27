@@ -85,15 +85,17 @@ const Index = () => {
           </div>
 
           {/* PDF Button */}
-          <a
-            href="/aurum-partner-program.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-button flex items-center justify-center gap-3 w-full mb-10 opacity-0 animate-fade-in-up animation-delay-700"
-          >
-            <FileText className="w-5 h-5 text-primary" />
-            <span>Apresentação Partner Program</span>
-          </a>
+          <div className="flex justify-center mb-10 opacity-0 animate-fade-in-up animation-delay-700">
+            <a
+              href="/aurum-partner-program.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm rounded-full border border-primary/30 bg-primary/10 text-primary hover:bg-primary/20 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20"
+            >
+              <FileText className="w-4 h-4" />
+              <span>Apresentação Partner Program</span>
+            </a>
+          </div>
 
           {/* Image Carousel */}
           <div className="mb-10">
