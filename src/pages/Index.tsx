@@ -1,4 +1,4 @@
-import { Globe, Youtube, Instagram, UserPlus, MessageCircle } from "lucide-react";
+import { Globe, Youtube, Instagram, UserPlus, MessageCircle, FileText } from "lucide-react";
 import ProfileHeader from "@/components/ProfileHeader";
 import LinkButton from "@/components/LinkButton";
 import SocialIcon from "@/components/SocialIcon";
@@ -83,6 +83,17 @@ const Index = () => {
               />
             ))}
           </div>
+
+          {/* PDF Button */}
+          <a
+            href="/aurum-partner-program.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-button flex items-center justify-center gap-3 w-full mb-10 opacity-0 animate-fade-in-up animation-delay-700"
+          >
+            <FileText className="w-5 h-5 text-primary" />
+            <span>Apresentação Partner Program</span>
+          </a>
 
           {/* Image Carousel */}
           <div className="mb-10">
