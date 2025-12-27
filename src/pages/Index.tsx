@@ -3,6 +3,7 @@ import ProfileHeader from "@/components/ProfileHeader";
 import LinkButton from "@/components/LinkButton";
 import SocialIcon from "@/components/SocialIcon";
 import VideoEmbed from "@/components/VideoEmbed";
+import ImageCarousel from "@/components/ImageCarousel";
 
 const Index = () => {
   const links = [
@@ -81,6 +82,11 @@ const Index = () => {
                 delay={link.delay}
               />
             ))}
+          </div>
+
+          {/* Image Carousel */}
+          <div className="mb-10">
+            <ImageCarousel />
           </div>
 
           {/* Social Icons */}
