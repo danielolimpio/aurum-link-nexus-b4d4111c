@@ -29,18 +29,19 @@ const ProfileHeader = () => {
         </div>
 
         {/* Logo - positioned to overlap banner */}
-        <div className="absolute left-1/2 -translate-x-1/2 -bottom-16 md:-bottom-20 z-10">
+        <div className="absolute left-1/2 -translate-x-1/2 -bottom-16 md:-bottom-20 z-50">
           <button
-            className="logo-ring cursor-pointer"
+            className="logo-ring cursor-pointer block"
             onClick={() => setIsStoriesOpen(true)}
             aria-label="Abrir stories"
+            style={{ position: 'relative', zIndex: 50 }}
           >
-            <div className="logo-ring-inner pointer-events-none">
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden pointer-events-none">
+            <div className="logo-ring-inner">
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden">
                 <img
                   src={aurumLogo}
                   alt="AURUM Foundation Logo"
-                  className="w-full h-full object-cover pointer-events-none"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
