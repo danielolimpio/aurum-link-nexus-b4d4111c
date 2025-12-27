@@ -23,6 +23,12 @@ jobs:
       - name: Build do projeto
         run: npm run build
 
+      - name: Remover arquivos do Lovable
+        run: |
+          rm -f dist/favicon.ico
+          rm -f dist/placeholder.svg
+          echo "Arquivos Lovable removidos com sucesso"
+
       - name: Mostrar arquivos gerados
         run: ls -la dist/
 
