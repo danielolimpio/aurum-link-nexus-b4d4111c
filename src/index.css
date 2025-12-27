@@ -137,20 +137,30 @@
   }
 
   .logo-ring {
-    @apply relative rounded-full;
-    background: linear-gradient(135deg, hsl(var(--aurum-blue-dark)), hsl(var(--aurum-cyan)));
-    padding: 4px;
+    @apply relative rounded-full cursor-pointer;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    padding: 3px;
+    transition: transform 0.2s ease;
+  }
+
+  .logo-ring:hover {
+    transform: scale(1.05);
   }
 
   .logo-ring::before {
     content: '';
     @apply absolute inset-0 rounded-full;
-    background: linear-gradient(90deg, hsl(var(--aurum-blue)), hsl(var(--aurum-cyan)), hsl(var(--aurum-blue)));
-    background-size: 200% 100%;
-    animation: gradient-spin 3s linear infinite;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    background-size: 200% 200%;
+    animation: instagram-gradient 3s ease infinite;
     z-index: -1;
-    margin: -3px;
-    filter: blur(8px);
+    margin: -2px;
+    filter: blur(4px);
+    opacity: 0.7;
+  }
+
+  .logo-ring-inner {
+    @apply rounded-full bg-background p-[3px];
   }
 
   .video-container {
@@ -186,6 +196,18 @@
   }
   100% {
     background-position: 200% 50%;
+  }
+}
+
+@keyframes instagram-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
