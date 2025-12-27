@@ -9,7 +9,15 @@ import story5 from "@/assets/stories/story-5.jpg";
 import story6 from "@/assets/stories/story-6.jpg";
 import story7 from "@/assets/stories/story-7.jpg";
 
-const stories = [story1, story2, story3, story4, story5, story6, story7];
+const stories = [
+  { src: story1, alt: "AURUM Foundation - Apresentação da plataforma de investimentos" },
+  { src: story2, alt: "AURUM - Como funciona a multiplicação de capital em USDT" },
+  { src: story3, alt: "AURUM Foundation - Depoimentos de investidores satisfeitos" },
+  { src: story4, alt: "AURUM - Benefícios do Partner Program para afiliados" },
+  { src: story5, alt: "AURUM Foundation - Segurança e confiabilidade da plataforma" },
+  { src: story6, alt: "AURUM - Resultados e rendimentos de investidores" },
+  { src: story7, alt: "AURUM Foundation - Como começar a investir na plataforma" },
+];
 
 interface StoriesViewerProps {
   isOpen: boolean;
@@ -107,8 +115,8 @@ const StoriesViewer = ({ isOpen, onClose }: StoriesViewerProps) => {
       {/* Story image */}
       <div className="relative w-full h-full flex items-center justify-center">
         <img
-          src={stories[currentIndex]}
-          alt={`Story ${currentIndex + 1}`}
+          src={stories[currentIndex].src}
+          alt={stories[currentIndex].alt}
           className="max-h-full max-w-full object-contain"
         />
 

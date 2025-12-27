@@ -30,26 +30,26 @@ import carousel19 from "@/assets/carousel/carousel-19.webp";
 import carousel20 from "@/assets/carousel/carousel-20.webp";
 
 const images = [
-  carousel1,
-  carousel2,
-  carousel3,
-  carousel4,
-  carousel5,
-  carousel6,
-  carousel7,
-  carousel8,
-  carousel9,
-  carousel10,
-  carousel11,
-  carousel12,
-  carousel13,
-  carousel14,
-  carousel15,
-  carousel16,
-  carousel17,
-  carousel18,
-  carousel19,
-  carousel20,
+  { src: carousel1, alt: "AURUM Foundation - Investimento seguro em criptomoedas e USDT" },
+  { src: carousel2, alt: "AURUM - Multiplicação de capital com tecnologia blockchain" },
+  { src: carousel3, alt: "AURUM Foundation - Resultados de investidores parceiros" },
+  { src: carousel4, alt: "AURUM - Plataforma de investimentos com inteligência artificial" },
+  { src: carousel5, alt: "AURUM Foundation - Sede em Dubai e Hong Kong" },
+  { src: carousel6, alt: "AURUM - Ecossistema financeiro descentralizado" },
+  { src: carousel7, alt: "AURUM Foundation - Rendimentos em USDT para investidores" },
+  { src: carousel8, alt: "AURUM - Tecnologia financeira inovadora" },
+  { src: carousel9, alt: "AURUM Foundation - Comunidade global de investidores" },
+  { src: carousel10, alt: "AURUM - Segurança e transparência em investimentos" },
+  { src: carousel11, alt: "AURUM Foundation - Oportunidade de crescimento financeiro" },
+  { src: carousel12, alt: "AURUM - Partner Program para afiliados" },
+  { src: carousel13, alt: "AURUM Foundation - Eventos exclusivos para parceiros" },
+  { src: carousel14, alt: "AURUM - Resultados comprovados de investimentos" },
+  { src: carousel15, alt: "AURUM Foundation - Liderança no mercado de criptomoedas" },
+  { src: carousel16, alt: "AURUM - Rede global de investidores e parceiros" },
+  { src: carousel17, alt: "AURUM Foundation - Inovação em ativos digitais" },
+  { src: carousel18, alt: "AURUM - Crescimento sustentável de capital" },
+  { src: carousel19, alt: "AURUM Foundation - Educação financeira e blockchain" },
+  { src: carousel20, alt: "AURUM - Futuro dos investimentos digitais" },
 ];
 
 const AUTOPLAY_INTERVAL = 4000;
@@ -126,8 +126,8 @@ const ImageCarousel = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 
                 <img
-                  src={image}
-                  alt={`AURUM Content ${index + 1}`}
+                  src={image.src}
+                  alt={image.alt}
                   className="w-full h-auto object-contain"
                 />
                 
