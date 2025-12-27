@@ -53,7 +53,7 @@ const Index = () => {
         <ProfileHeader />
 
         {/* Content Section */}
-        <div className="relative z-10 px-4 pt-24 md:pt-28 pb-12 max-w-lg mx-auto">
+        <div className="relative px-4 pt-24 md:pt-28 pb-12 max-w-lg mx-auto">
           {/* Title */}
           <h1 className="text-2xl md:text-3xl font-display font-bold text-center mb-3 opacity-0 animate-fade-in-up animation-delay-100">
             <span className="text-gradient">A maneira mais segura</span>
