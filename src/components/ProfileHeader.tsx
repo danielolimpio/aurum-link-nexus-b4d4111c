@@ -5,11 +5,11 @@ const ProfileHeader = () => {
   return (
     <div className="relative w-full">
       {/* Banner */}
-      <div className="relative w-full h-[50vh] md:h-[60vh] lg:h-[70vh] overflow-hidden">
+      <div className="relative w-full overflow-hidden">
         <img
           src={blockchainBanner}
           alt="Blockchain Technology Background"
-          className="w-full h-full object-cover"
+          className="w-full h-auto object-contain"
         />
         <div className="banner-overlay" />
         
