@@ -4,6 +4,7 @@ import LinkButton from "@/components/LinkButton";
 import SocialIcon from "@/components/SocialIcon";
 import VideoEmbed from "@/components/VideoEmbed";
 import ImageCarousel from "@/components/ImageCarousel";
+import ZoomLiveButton from "@/components/ZoomLiveButton";
 
 const Index = () => {
   const links = [
@@ -103,7 +104,7 @@ const Index = () => {
           </div>
 
           {/* Social Icons */}
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-4 items-center">
             {socialLinks.map((social) => (
               <SocialIcon
                 key={social.href}
@@ -112,6 +113,7 @@ const Index = () => {
                 label={social.label}
               />
             ))}
+            <ZoomLiveButton />
           </div>
 
           {/* Footer */}
