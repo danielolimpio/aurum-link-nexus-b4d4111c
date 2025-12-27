@@ -16,17 +16,31 @@ interface TimeLeft {
   seconds: number;
 }
 
-const getNextLiveDate = (): Date => {
-  // Horário de Brasília (UTC-3)
+const getBrasiliaTime = (): Date => {
   const now = new Date();
   const brasiliaOffset = -3 * 60; // -3 horas em minutos
   const localOffset = now.getTimezoneOffset();
   const diffMinutes = localOffset + brasiliaOffset;
+  return new Date(now.getTime() + diffMinutes * 60 * 1000);
+};
+
+const isLiveNow = (): boolean => {
+  const nowInBrasilia = getBrasiliaTime();
+  const hour = nowInBrasilia.getHours();
+  const day = nowInBrasilia.getDay();
   
-  // Ajusta para horário de Brasília
-  const nowInBrasilia = new Date(now.getTime() + diffMinutes * 60 * 1000);
+  // Live acontece de seg(1) a sáb(6), das 22h às 23h
+  return day >= 1 && day <= 6 && hour >= 22 && hour < 23;
+};
+
+const getNextLiveDate = (): Date => {
+  const now = new Date();
+  const brasiliaOffset = -3 * 60;
+  const localOffset = now.getTimezoneOffset();
+  const diffMinutes = localOffset + brasiliaOffset;
   
-  // Próxima live às 22h
+  const nowInBrasilia = getBrasiliaTime();
+  
   const nextLive = new Date(nowInBrasilia);
   nextLive.setHours(22, 0, 0, 0);
   
@@ -62,10 +76,12 @@ const calculateTimeLeft = (): TimeLeft => {
 const ZoomLiveButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
+  const [isLive, setIsLive] = useState(isLiveNow());
 
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
+      setIsLive(isLiveNow());
     }, 1000);
 
     return () => clearInterval(timer);
@@ -112,43 +128,60 @@ const ZoomLiveButton = () => {
                 🕙 22h (Horário de Brasília)
               </span>
               
-              {/* Countdown */}
-              <div className="bg-muted/50 rounded-lg p-4 mt-2">
-                <div className="flex items-center justify-center gap-1 text-muted-foreground text-sm mb-3">
-                  <Clock className="w-4 h-4" />
-                  <span>Próxima live em:</span>
+              {/* Live Ao Vivo ou Countdown */}
+              {isLive ? (
+                <div className="bg-red-500/20 border border-red-500/50 rounded-lg p-4 mt-2 animate-pulse">
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <span className="relative flex h-4 w-4">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-4 w-4 bg-red-600"></span>
+                    </span>
+                    <span className="text-red-500 font-bold text-lg uppercase tracking-wider">
+                      🔴 AO VIVO AGORA!
+                    </span>
+                  </div>
+                  <p className="text-foreground text-sm">
+                    A live está acontecendo! Entre agora e participe.
+                  </p>
                 </div>
-                <div className="flex justify-center gap-2">
-                  {timeLeft.days > 0 && (
+              ) : (
+                <div className="bg-muted/50 rounded-lg p-4 mt-2">
+                  <div className="flex items-center justify-center gap-1 text-muted-foreground text-sm mb-3">
+                    <Clock className="w-4 h-4" />
+                    <span>Próxima live em:</span>
+                  </div>
+                  <div className="flex justify-center gap-2">
+                    {timeLeft.days > 0 && (
+                      <div className="flex flex-col items-center">
+                        <span className="text-2xl font-bold text-primary tabular-nums">
+                          {formatNumber(timeLeft.days)}
+                        </span>
+                        <span className="text-xs text-muted-foreground">dias</span>
+                      </div>
+                    )}
                     <div className="flex flex-col items-center">
                       <span className="text-2xl font-bold text-primary tabular-nums">
-                        {formatNumber(timeLeft.days)}
+                        {formatNumber(timeLeft.hours)}
                       </span>
-                      <span className="text-xs text-muted-foreground">dias</span>
+                      <span className="text-xs text-muted-foreground">horas</span>
                     </div>
-                  )}
-                  <div className="flex flex-col items-center">
-                    <span className="text-2xl font-bold text-primary tabular-nums">
-                      {formatNumber(timeLeft.hours)}
-                    </span>
-                    <span className="text-xs text-muted-foreground">horas</span>
-                  </div>
-                  <span className="text-2xl font-bold text-primary">:</span>
-                  <div className="flex flex-col items-center">
-                    <span className="text-2xl font-bold text-primary tabular-nums">
-                      {formatNumber(timeLeft.minutes)}
-                    </span>
-                    <span className="text-xs text-muted-foreground">min</span>
-                  </div>
-                  <span className="text-2xl font-bold text-primary">:</span>
-                  <div className="flex flex-col items-center">
-                    <span className="text-2xl font-bold text-primary tabular-nums">
-                      {formatNumber(timeLeft.seconds)}
-                    </span>
-                    <span className="text-xs text-muted-foreground">seg</span>
+                    <span className="text-2xl font-bold text-primary">:</span>
+                    <div className="flex flex-col items-center">
+                      <span className="text-2xl font-bold text-primary tabular-nums">
+                        {formatNumber(timeLeft.minutes)}
+                      </span>
+                      <span className="text-xs text-muted-foreground">min</span>
+                    </div>
+                    <span className="text-2xl font-bold text-primary">:</span>
+                    <div className="flex flex-col items-center">
+                      <span className="text-2xl font-bold text-primary tabular-nums">
+                        {formatNumber(timeLeft.seconds)}
+                      </span>
+                      <span className="text-xs text-muted-foreground">seg</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </DialogDescription>
           </DialogHeader>
           
