@@ -44,27 +44,27 @@ const Index = () => {
   return (
     <>
       {/* SEO Meta Tags */}
-      <title>AURUM Foundation - A maneira mais segura de gerenciar seus ativos digitais</title>
+      <title>Aurum Foundation | Plataforma de Investimento em USDT com IA e Blockchain</title>
       <meta
         name="description"
-        content="A AURUM é um ecossistema líder em tecnologia financeira, impulsionado por Inteligência Artificial e Blockchain."
+        content="Aurum Foundation é a plataforma líder em multiplicação de capital em USDT. Tecnologia com IA e Blockchain, sede em Dubai. Cadastre-se e multiplique seu capital com segurança."
       />
 
-      <main className="min-h-screen bg-background">
+      <main className="min-h-screen bg-background" itemScope itemType="https://schema.org/WebPage">
         <ProfileHeader />
 
         {/* Content Section */}
-        <div className="relative px-4 pt-24 md:pt-28 pb-12 max-w-lg mx-auto">
-          {/* Title */}
-          <h1 className="text-2xl md:text-3xl font-display font-bold text-center mb-3 opacity-0 animate-fade-in-up animation-delay-100">
-            <span className="text-gradient">A maneira mais segura</span>
+        <article className="relative px-4 pt-24 md:pt-28 pb-12 max-w-lg mx-auto" itemScope itemType="https://schema.org/Article">
+          {/* Title - H1 with primary keyword */}
+          <h1 className="text-2xl md:text-3xl font-display font-bold text-center mb-3 opacity-0 animate-fade-in-up animation-delay-100" itemProp="headline">
+            <span className="text-gradient">Aurum Foundation</span>
             <br />
-            <span className="text-foreground">de gerenciar seus ativos digitais</span>
+            <span className="text-foreground">Invista com Segurança em USDT</span>
           </h1>
 
-          {/* Meta Description */}
-          <p className="text-muted-foreground text-center text-sm md:text-base mb-8 opacity-0 animate-fade-in-up animation-delay-200">
-            A AURUM é um ecossistema líder em tecnologia financeira, impulsionado por Inteligência Artificial e Blockchain.
+          {/* Meta Description with keyword */}
+          <p className="text-muted-foreground text-center text-sm md:text-base mb-8 opacity-0 animate-fade-in-up animation-delay-200" itemProp="description">
+            A <strong>Aurum Foundation</strong> é um ecossistema líder em tecnologia financeira, impulsionado por Inteligência Artificial e Blockchain.
           </p>
 
           {/* Video Section */}
@@ -98,10 +98,10 @@ const Index = () => {
             </a>
           </div>
 
-          {/* Image Carousel */}
-          <div className="mb-10">
+          {/* Image Carousel - Aurum Foundation Products */}
+          <section className="mb-10" aria-label="Produtos Aurum Foundation">
             <ImageCarousel />
-          </div>
+          </section>
 
           {/* Social Icons */}
           <div className="flex justify-center gap-4 items-center">
@@ -117,18 +117,19 @@ const Index = () => {
           </div>
 
           {/* Footer */}
-          <p className="text-center text-muted-foreground/50 text-xs mt-12">
-            © {new Date().getFullYear()} AURUM Foundation | Todos os direitos reservados | Desenvolvido por{" "}
-            <a 
-              href="https://danielolimpio.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-primary/70 hover:text-primary transition-colors underline underline-offset-2"
-            >
-              DanielOlimpio
-            </a>
-          </p>
-        </div>
+          <footer className="text-center text-muted-foreground/50 text-xs mt-12">
+            <p>© {new Date().getFullYear()} <strong>Aurum Foundation</strong> | Todos os direitos reservados | Desenvolvido por{" "}
+              <a 
+                href="https://danielolimpio.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary/70 hover:text-primary transition-colors underline underline-offset-2"
+              >
+                DanielOlimpio
+              </a>
+            </p>
+          </footer>
+        </article>
       </main>
     </>
   );
