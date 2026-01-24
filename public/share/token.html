@@ -28,6 +28,30 @@
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico">
   
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialProduct",
+    "name": "Aurum Token (AUR)",
+    "description": "Token nativo do ecossistema Aurum para pagamentos, recompensas, staking e governança comunitária.",
+    "url": "https://aurumfoundation.top/share/token",
+    "provider": {
+      "@type": "Organization",
+      "name": "Aurum Foundation",
+      "url": "https://aurumfoundation.top"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://backoffice.aurum.foundation/u/5CW428"
+    },
+    "image": "https://aurumfoundation.top/images/og-token.jpg"
+  }
+  </script>
+  
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: system-ui, -apple-system, sans-serif; background: #0a0a0a; color: #fafafa; min-height: 100vh; padding: 2rem 1rem; line-height: 1.7; }
@@ -68,10 +92,7 @@
       <img src="https://aurumfoundation.top/images/og-token.jpg" alt="Aurum Token - Criptomoeda Nativa do Ecossistema" loading="lazy">
     </header>
     
-    <main itemscope itemtype="https://schema.org/Product">
-      <meta itemprop="name" content="Aurum Token">
-      <meta itemprop="description" content="Token nativo do ecossistema Aurum para pagamentos, recompensas e governança.">
-      
+    <main>
       <section>
         <h2>Usos do Aurum Token</h2>
         <ul>

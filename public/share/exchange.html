@@ -28,6 +28,32 @@
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico">
   
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Aurum Exchange",
+    "description": "Plataforma de negociação de criptomoedas do ecossistema Aurum. Interface intuitiva, taxas baixas e execução rápida de ordens.",
+    "url": "https://aurumfoundation.top/share/exchange",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://backoffice.aurum.foundation/u/5CW428"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Aurum Foundation",
+      "url": "https://aurumfoundation.top"
+    },
+    "image": "https://aurumfoundation.top/images/og-exchange.jpg"
+  }
+  </script>
+  
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: system-ui, -apple-system, sans-serif; background: #0a0a0a; color: #fafafa; min-height: 100vh; padding: 2rem 1rem; line-height: 1.7; }
@@ -68,11 +94,7 @@
       <img src="https://aurumfoundation.top/images/og-exchange.jpg" alt="Aurum Exchange - Plataforma de Trading de Criptomoedas" loading="lazy">
     </header>
     
-    <main itemscope itemtype="https://schema.org/WebApplication">
-      <meta itemprop="name" content="Aurum Exchange">
-      <meta itemprop="description" content="Plataforma de negociação de criptomoedas do ecossistema Aurum.">
-      <meta itemprop="applicationCategory" content="FinanceApplication">
-      
+    <main>
       <section>
         <h2>Recursos da Aurum Exchange</h2>
         <ul>
