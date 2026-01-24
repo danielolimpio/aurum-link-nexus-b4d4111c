@@ -6,6 +6,7 @@
 /share/card         /share/card.html         200
 /share/exchange     /share/exchange.html     200
 /share/token        /share/token.html        200
+/sitemap            /sitemap.html            200
 
 # SPA fallback para outras rotas
 /*    /index.html   200
