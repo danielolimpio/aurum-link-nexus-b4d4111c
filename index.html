@@ -24,53 +24,113 @@
     <meta name="msapplication-TileColor" content="#D4AF37" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     
-    <!-- JSON-LD Structured Data -->
+    <!-- JSON-LD Structured Data - Organization (Completo para Rich Results) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://aurumfoundation.top/#organization",
       "name": "AURUM Foundation",
-      "alternateName": "AURUM",
+      "alternateName": ["AURUM", "Aurum Foundation", "Aurum"],
       "url": "https://aurumfoundation.top",
-      "logo": "https://aurumfoundation.top/favicon.jpg",
-      "description": "A AURUM é um ecossistema líder em tecnologia financeira, impulsionado por Inteligência Artificial e Blockchain. Multiplicação de capital em USDT com segurança.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://aurumfoundation.top/favicon.jpg",
+        "width": 512,
+        "height": 512,
+        "caption": "AURUM Foundation Logo"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://aurumfoundation.top/og-image.jpg",
+        "width": 1200,
+        "height": 630
+      },
+      "description": "A AURUM Foundation é um ecossistema líder em tecnologia financeira, impulsionado por Inteligência Artificial e Blockchain. Multiplicação de capital em USDT com segurança.",
       "foundingDate": "2023",
+      "slogan": "Invista com Segurança em USDT",
       "sameAs": [
-        "https://www.youtube.com/@aurumfoundation",
-        "https://www.instagram.com/aurumfoundation"
+        "https://www.youtube.com/@aurumfoundationoficial",
+        "https://www.instagram.com/aurum.foundation/"
       ],
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Business Bay",
         "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
         "addressCountry": "AE"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "url": "https://aurumfoundation.top"
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+55-12-98140-8992",
+          "contactType": "customer service",
+          "areaServed": ["BR", "PT", "AO", "MZ"],
+          "availableLanguage": ["Portuguese", "English"]
+        }
+      ],
+      "knowsAbout": ["Blockchain", "Cryptocurrency", "USDT", "Artificial Intelligence", "Fintech", "Digital Assets"],
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "minValue": 50,
+        "maxValue": 200
       }
     }
     </script>
     
-    <!-- WebSite Schema -->
+    <!-- WebSite Schema (Completo para Rich Results) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": "https://aurumfoundation.top/#website",
       "name": "AURUM Foundation",
       "alternateName": "AURUM",
       "url": "https://aurumfoundation.top",
-      "description": "A AURUM é um ecossistema líder em tecnologia financeira, impulsionado por Inteligência Artificial e Blockchain.",
+      "description": "Plataforma de Investimento em USDT com IA e Blockchain. Multiplique seu capital com segurança.",
       "inLanguage": "pt-BR",
       "publisher": {
-        "@type": "Organization",
-        "name": "AURUM Foundation",
-        "url": "https://aurumfoundation.top"
+        "@id": "https://aurumfoundation.top/#organization"
       },
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://aurumfoundation.top/?q={search_term_string}",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://aurumfoundation.top/?q={search_term_string}"
+        },
         "query-input": "required name=search_term_string"
+      },
+      "copyrightYear": 2023,
+      "copyrightHolder": {
+        "@id": "https://aurumfoundation.top/#organization"
+      }
+    }
+    </script>
+    
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://aurumfoundation.top/#webpage",
+      "url": "https://aurumfoundation.top",
+      "name": "Aurum Foundation | Plataforma de Investimento em USDT com IA e Blockchain",
+      "description": "Aurum Foundation é a plataforma líder em multiplicação de capital em USDT. Tecnologia com IA e Blockchain, sede em Dubai.",
+      "isPartOf": {
+        "@id": "https://aurumfoundation.top/#website"
+      },
+      "about": {
+        "@id": "https://aurumfoundation.top/#organization"
+      },
+      "inLanguage": "pt-BR",
+      "datePublished": "2023-01-01",
+      "dateModified": "2026-01-24",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://aurumfoundation.top/og-image.jpg"
+      },
+      "breadcrumb": {
+        "@id": "https://aurumfoundation.top/#breadcrumb"
       }
     }
     </script>
@@ -80,32 +140,43 @@
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
+      "@id": "https://aurumfoundation.top/#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://aurumfoundation.top/"
+          "item": "https://aurumfoundation.top"
         }
       ]
     }
     </script>
     
-    <!-- FinancialService Schema -->
+    <!-- FinancialService Schema (Completo para Rich Results) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FinancialService",
-      "name": "AURUM Foundation",
-      "description": "Multiplicação de capital em USDT com segurança. Até 7x em 1 ano.",
+      "@id": "https://aurumfoundation.top/#financialservice",
+      "name": "AURUM Foundation - Investimentos em USDT",
+      "description": "Multiplicação de capital em USDT com segurança. Tecnologia IA e Blockchain para rendimentos otimizados.",
       "url": "https://aurumfoundation.top",
       "logo": "https://aurumfoundation.top/favicon.jpg",
       "image": "https://aurumfoundation.top/og-image.jpg",
       "priceRange": "$$$",
+      "currenciesAccepted": "USD, USDT, BTC, ETH",
+      "paymentAccepted": "Cryptocurrency, Bank Transfer",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Business Bay",
         "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
         "addressCountry": "AE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.2048,
+        "longitude": 55.2708
       },
       "areaServed": {
         "@type": "GeoCircle",
@@ -115,6 +186,10 @@
           "longitude": 55.2708
         },
         "geoRadius": "50000"
+      },
+      "serviceType": ["Investment Platform", "Cryptocurrency Trading", "AI Trading Bot"],
+      "provider": {
+        "@id": "https://aurumfoundation.top/#organization"
       }
     }
     </script>

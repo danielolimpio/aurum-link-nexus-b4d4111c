@@ -123,10 +123,11 @@ const Index = () => {
 
           {/* Footer */}
           <footer className="text-center text-muted-foreground/50 text-xs mt-12 space-y-4">
-            {/* Products Navigation */}
-            <nav aria-label="Produtos Aurum" className="py-4 border-t border-b border-primary/10">
-              <p className="text-muted-foreground/40 text-[10px] uppercase tracking-widest mb-3">Nossos Produtos</p>
+            {/* Main Navigation */}
+            <nav aria-label="Navegação principal" className="py-4 border-t border-primary/10">
               <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+                <a href="/" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300 font-medium">Home</a>
+                <span className="text-primary/20">•</span>
                 <a href="/share/ex-ai-bot" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">EX-AI Bot</a>
                 <span className="text-primary/20">•</span>
                 <a href="/share/zeus-ai-bot" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">Zeus Bot</a>
@@ -140,6 +141,8 @@ const Index = () => {
                 <a href="/share/exchange" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">Exchange</a>
                 <span className="text-primary/20">•</span>
                 <a href="/share/token" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">Token</a>
+                <span className="text-primary/20">•</span>
+                <a href="/contato" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300 font-medium">Contato</a>
               </div>
             </nav>
             
