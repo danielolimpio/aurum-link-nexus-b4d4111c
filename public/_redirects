@@ -1,0 +1,11 @@
+# Redirects para URLs limpas (sem .html e sem barra final)
+/share/ex-ai-bot    /share/ex-ai-bot.html    200
+/share/zeus-ai-bot  /share/zeus-ai-bot.html  200
+/share/flash-loans  /share/flash-loans.html  200
+/share/neo-bank     /share/neo-bank.html     200
+/share/card         /share/card.html         200
+/share/exchange     /share/exchange.html     200
+/share/token        /share/token.html        200
+
+# SPA fallback para outras rotas
+/*    /index.html   200
