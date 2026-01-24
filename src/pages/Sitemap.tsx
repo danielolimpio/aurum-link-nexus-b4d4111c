@@ -16,9 +16,11 @@ const Sitemap = () => {
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>Sitemap - Aurum Foundation</title>
         <meta name="description" content="Mapa do site Aurum Foundation - Navegue por todas as páginas do ecossistema financeiro digital." />
         <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://aurumfoundation.top/sitemap" />
       </Helmet>
       
       <main className="min-h-screen bg-background text-foreground">

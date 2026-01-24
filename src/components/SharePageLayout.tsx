@@ -20,12 +20,15 @@ const SharePageLayout = ({ title, description, imageUrl, canonicalUrl }: SharePa
   return (
     <>
       <Helmet>
+        <html lang="pt-BR" />
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href={canonicalUrl} />
         
         {/* Open Graph */}
         <meta property="og:type" content="website" />
+        <meta property="og:locale" content="pt_BR" />
         <meta property="og:site_name" content="Aurum Foundation" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:title" content={title} />
