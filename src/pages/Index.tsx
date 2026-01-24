@@ -1,4 +1,5 @@
 import { Globe, Youtube, Instagram, UserPlus, MessageCircle, FileText } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import ProfileHeader from "@/components/ProfileHeader";
 import LinkButton from "@/components/LinkButton";
 import SocialIcon from "@/components/SocialIcon";
@@ -43,12 +44,13 @@ const Index = () => {
 
   return (
     <>
-      {/* SEO Meta Tags */}
-      <title>Aurum Foundation | Plataforma de Investimento em USDT com IA e Blockchain</title>
-      <meta
-        name="description"
-        content="Aurum Foundation é a plataforma líder em multiplicação de capital em USDT. Tecnologia com IA e Blockchain, sede em Dubai. Cadastre-se e multiplique seu capital com segurança."
-      />
+      <Helmet>
+        <html lang="pt-BR" />
+        <title>Aurum Foundation | Plataforma de Investimento em USDT com IA e Blockchain</title>
+        <meta name="description" content="Aurum Foundation é a plataforma líder em multiplicação de capital em USDT. Tecnologia com IA e Blockchain, sede em Dubai. Cadastre-se e multiplique seu capital com segurança." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://aurumfoundation.top" />
+      </Helmet>
 
       <main className="min-h-screen bg-background" itemScope itemType="https://schema.org/WebPage">
         <ProfileHeader />
