@@ -5,24 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://aurumfoundation.top/share/neo-bank">
-  <title>Neo-Bank – Seu Banco Digital em USDT | Aurum Foundation</title>
-  <meta name="description" content="Conta, transferências e rendimento tudo em stablecoin. Já disponível para download! Banco digital 100% em USDT.">
+  <title>Aurum NeoBank App – Sua Conta Cripto Moderna e Segura | Aurum Foundation</title>
+  <meta name="description" content="O Aurum NeoBank App é a conta bancária do futuro. Acesso a criptomoedas, cartões físicos e virtuais, e integração completa com o ecossistema Aurum.">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Aurum Foundation">
   <meta property="og:url" content="https://aurumfoundation.top/share/neo-bank">
-  <meta property="og:title" content="Neo-Bank – Seu Banco Digital em USDT">
-  <meta property="og:description" content="Conta, transferências e rendimento tudo em stablecoin. Já disponível para download!">
+  <meta property="og:title" content="Aurum NeoBank App – Sua Conta Cripto Moderna e Segura">
+  <meta property="og:description" content="O Aurum NeoBank App é a conta bancária do futuro. Acesso a criptomoedas, cartões físicos e virtuais.">
   <meta property="og:image" content="https://aurumfoundation.top/images/og-neo-bank.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Neo-Bank – Seu Banco Digital em USDT">
-  <meta name="twitter:description" content="Conta, transferências e rendimento tudo em stablecoin. Já disponível para download!">
+  <meta name="twitter:title" content="Aurum NeoBank App – Sua Conta Cripto Moderna e Segura">
+  <meta name="twitter:description" content="O Aurum NeoBank App é a conta bancária do futuro. Acesso a criptomoedas, cartões físicos e virtuais.">
   <meta name="twitter:image" content="https://aurumfoundation.top/images/og-neo-bank.jpg">
   
   <!-- Favicon -->
@@ -30,30 +30,87 @@
   
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: system-ui, -apple-system, sans-serif; background: #0a0a0a; color: #fafafa; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1rem; }
-    main { max-width: 32rem; text-align: center; }
-    h1 { font-size: 1.875rem; font-weight: 700; color: #d4af37; margin-bottom: 1rem; }
-    p { color: #a1a1aa; font-size: 1.125rem; margin-bottom: 1.5rem; line-height: 1.6; }
-    img { width: 100%; border-radius: 0.5rem; box-shadow: 0 10px 25px rgba(0,0,0,0.5); margin-bottom: 1.5rem; }
-    .buttons { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 9999px; font-weight: 500; text-decoration: none; transition: all 0.3s; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: #0a0a0a; color: #fafafa; min-height: 100vh; padding: 2rem 1rem; line-height: 1.7; }
+    .container { max-width: 48rem; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(212,175,55,0.2); }
+    .badge { display: inline-block; background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.3); color: #d4af37; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; margin-bottom: 1rem; }
+    h1 { font-size: 2rem; font-weight: 700; color: #d4af37; margin-bottom: 1rem; }
+    .intro { color: #a1a1aa; font-size: 1.125rem; margin-bottom: 1.5rem; }
+    img { width: 100%; border-radius: 0.75rem; box-shadow: 0 10px 40px rgba(0,0,0,0.5); margin-bottom: 2rem; }
+    section { margin-bottom: 2.5rem; }
+    h2 { font-size: 1.5rem; font-weight: 600; color: #fafafa; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(212,175,55,0.15); }
+    p { color: #a1a1aa; margin-bottom: 1rem; }
+    ul { list-style: none; margin-bottom: 1.5rem; }
+    li { color: #a1a1aa; margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; }
+    li::before { content: "✦"; position: absolute; left: 0; color: #d4af37; }
+    li strong { color: #fafafa; }
+    .cta-box { background: linear-gradient(135deg, rgba(212,175,55,0.1) 0%, rgba(212,175,55,0.05) 100%); border: 1px solid rgba(212,175,55,0.3); border-radius: 1rem; padding: 2rem; text-align: center; margin-top: 2rem; }
+    .cta-box h2 { border: none; padding: 0; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1.5rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 1.75rem; border-radius: 9999px; font-weight: 500; text-decoration: none; transition: all 0.3s; }
     .btn-primary { background: #d4af37; color: #0a0a0a; }
-    .btn-primary:hover { background: #c9a430; }
+    .btn-primary:hover { background: #c9a430; transform: translateY(-2px); }
     .btn-secondary { border: 1px solid #d4af37; color: #d4af37; background: transparent; }
     .btn-secondary:hover { background: rgba(212,175,55,0.1); }
-    footer { margin-top: 2rem; font-size: 0.75rem; color: #52525b; }
+    footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(212,175,55,0.1); text-align: center; }
+    .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1rem; margin-bottom: 1rem; }
+    .footer-nav a { color: #71717a; text-decoration: none; font-size: 0.875rem; }
+    .footer-nav a:hover { color: #d4af37; }
+    .copyright { font-size: 0.75rem; color: #52525b; }
   </style>
 </head>
 <body>
-  <main itemscope itemtype="https://schema.org/Product">
-    <h1 itemprop="name">Neo-Bank – Seu Banco Digital em USDT</h1>
-    <p itemprop="description">Conta, transferências e rendimento tudo em stablecoin. Já disponível para download! O banco digital 100% em USDT que você esperava.</p>
-    <img src="https://aurumfoundation.top/images/og-neo-bank.jpg" alt="Neo-Bank - Banco Digital USDT" itemprop="image">
-    <div class="buttons">
-      <a href="https://aurumfoundation.top" class="btn btn-primary">← Voltar para Home</a>
-      <a href="https://backoffice.aurum.foundation/u/5CW428" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Cadastre-se Agora →</a>
-    </div>
-    <footer>© 2026 Aurum Foundation - Todos os direitos reservados</footer>
-  </main>
+  <div class="container">
+    <header>
+      <span class="badge">Banco Digital</span>
+      <h1>Aurum NeoBank App: Sua Conta Cripto Moderna e Segura</h1>
+      <p class="intro">O Aurum NeoBank App é a conta bancária do futuro — projetada para o mundo digital. Com acesso a criptomoedas, cartões físicos e virtuais, e integração completa com o ecossistema Aurum, ele oferece conveniência e controle total sobre seu dinheiro.</p>
+      <img src="https://aurumfoundation.top/images/og-neo-bank.jpg" alt="Aurum NeoBank App - Banco Digital Cripto" loading="lazy">
+    </header>
+    
+    <main itemscope itemtype="https://schema.org/MobileApplication">
+      <meta itemprop="name" content="Aurum NeoBank App">
+      <meta itemprop="description" content="Aplicativo bancário digital com suporte a criptomoedas e integração com o ecossistema Aurum.">
+      <meta itemprop="operatingSystem" content="iOS, Android">
+      
+      <section>
+        <h2>Recursos do NeoBank App</h2>
+        <ul>
+          <li><strong>Saldo em Tempo Real:</strong> Veja seu saldo total e o valor de suas criptomoedas atualizadas em tempo real, sempre que precisar. Dashboard intuitivo com gráficos de evolução patrimonial.</li>
+          <li><strong>Depósitos e Saques Fáceis:</strong> Adicione fundos via Apple Pay, Google Pay ou transferência bancária com facilidade. Converta entre moedas fiduciárias e cripto instantaneamente.</li>
+          <li><strong>Cartão Aurum Integrado:</strong> Use seu cartão para compras online e offline, com cashback e recompensas baseadas no seu nível Legacy. Aceito em milhões de estabelecimentos no mundo todo.</li>
+          <li><strong>Exchange Interna:</strong> Troque criptomoedas diretamente no app, com taxas competitivas e execução rápida. Acesse dezenas de pares de negociação sem sair do aplicativo.</li>
+        </ul>
+      </section>
+      
+      <section>
+        <h2>Como o NeoBank App Beneficia Parceiros?</h2>
+        <p>Cada transação feita com o cartão ou no app gera Legacy Volume para sua equipe, acelerando seu progresso nos níveis do programa de parceiros. Além disso, você participa do Profitshare diário com base no seu nível Legacy — podendo receber até 30% no nível Alpha.</p>
+        <p>O NeoBank App é mais do que uma conta bancária digital; é uma ferramenta de crescimento financeiro que conecta você ao ecossistema Aurum de forma completa e integrada. Gerencie seus investimentos, acompanhe seus rendimentos e faça transações — tudo em um único aplicativo.</p>
+        <p>Com interface moderna e intuitiva, o app foi desenvolvido para oferecer a melhor experiência em gestão de ativos digitais, combinando segurança bancária com a flexibilidade das criptomoedas.</p>
+      </section>
+      
+      <section class="cta-box">
+        <h2>Baixe Agora e Comece a Usar</h2>
+        <p>O Aurum NeoBank App está em fase beta para iOS e Android. Obtenha acesso antecipado para testar transações reais antes do lançamento global e seja um dos primeiros a experimentar o futuro dos bancos digitais.</p>
+        <div class="buttons">
+          <a href="https://backoffice.aurum.foundation/u/5CW428" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Cadastre-se Agora →</a>
+          <a href="/share/card" class="btn btn-secondary">Conhecer o Aurum Card</a>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <nav class="footer-nav">
+        <a href="/share/ex-ai-bot">EX-AI Bot</a>
+        <a href="/share/zeus-ai-bot">Zeus AI Bot</a>
+        <a href="/share/flash-loans">Flash Loans</a>
+        <a href="/share/card">Card</a>
+        <a href="/share/exchange">Exchange</a>
+        <a href="/share/token">Token</a>
+      </nav>
+      <p class="copyright">© 2026 Aurum Foundation - Todos os direitos reservados</p>
+    </footer>
+  </div>
 </body>
 </html>

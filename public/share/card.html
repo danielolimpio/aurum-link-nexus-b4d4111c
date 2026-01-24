@@ -5,24 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://aurumfoundation.top/share/card">
-  <title>Cartão Aurum – Gaste Crypto como Dinheiro Físico | Aurum Foundation</title>
-  <meta name="description" content="USDT aceito globalmente com Visa/Mastercard integrado. Saque em caixas eletrônicos! Cartão crypto para uso no dia a dia.">
+  <title>Aurum Card – Seu Cartão Cripto com Recompensas Exclusivas | Aurum Foundation</title>
+  <meta name="description" content="O Aurum Card é mais do que um cartão de débito — é uma chave para o ecossistema Aurum. Use para compras, saques e ganhe recompensas baseadas no seu nível Legacy.">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Aurum Foundation">
   <meta property="og:url" content="https://aurumfoundation.top/share/card">
-  <meta property="og:title" content="Cartão Aurum – Gaste Crypto como Dinheiro Físico">
-  <meta property="og:description" content="USDT aceito globalmente com Visa/Mastercard integrado. Saque em caixas eletrônicos!">
+  <meta property="og:title" content="Aurum Card – Seu Cartão Cripto com Recompensas Exclusivas">
+  <meta property="og:description" content="O Aurum Card é mais do que um cartão de débito — é uma chave para o ecossistema Aurum.">
   <meta property="og:image" content="https://aurumfoundation.top/images/og-card.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Cartão Aurum – Gaste Crypto como Dinheiro Físico">
-  <meta name="twitter:description" content="USDT aceito globalmente com Visa/Mastercard integrado. Saque em caixas eletrônicos!">
+  <meta name="twitter:title" content="Aurum Card – Seu Cartão Cripto com Recompensas Exclusivas">
+  <meta name="twitter:description" content="O Aurum Card é mais do que um cartão de débito — é uma chave para o ecossistema Aurum.">
   <meta name="twitter:image" content="https://aurumfoundation.top/images/og-card.jpg">
   
   <!-- Favicon -->
@@ -30,30 +30,86 @@
   
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: system-ui, -apple-system, sans-serif; background: #0a0a0a; color: #fafafa; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1rem; }
-    main { max-width: 32rem; text-align: center; }
-    h1 { font-size: 1.875rem; font-weight: 700; color: #d4af37; margin-bottom: 1rem; }
-    p { color: #a1a1aa; font-size: 1.125rem; margin-bottom: 1.5rem; line-height: 1.6; }
-    img { width: 100%; border-radius: 0.5rem; box-shadow: 0 10px 25px rgba(0,0,0,0.5); margin-bottom: 1.5rem; }
-    .buttons { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 9999px; font-weight: 500; text-decoration: none; transition: all 0.3s; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: #0a0a0a; color: #fafafa; min-height: 100vh; padding: 2rem 1rem; line-height: 1.7; }
+    .container { max-width: 48rem; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(212,175,55,0.2); }
+    .badge { display: inline-block; background: rgba(212,175,55,0.1); border: 1px solid rgba(212,175,55,0.3); color: #d4af37; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; margin-bottom: 1rem; }
+    h1 { font-size: 2rem; font-weight: 700; color: #d4af37; margin-bottom: 1rem; }
+    .intro { color: #a1a1aa; font-size: 1.125rem; margin-bottom: 1.5rem; }
+    img { width: 100%; border-radius: 0.75rem; box-shadow: 0 10px 40px rgba(0,0,0,0.5); margin-bottom: 2rem; }
+    section { margin-bottom: 2.5rem; }
+    h2 { font-size: 1.5rem; font-weight: 600; color: #fafafa; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(212,175,55,0.15); }
+    p { color: #a1a1aa; margin-bottom: 1rem; }
+    ul { list-style: none; margin-bottom: 1.5rem; }
+    li { color: #a1a1aa; margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; }
+    li::before { content: "✦"; position: absolute; left: 0; color: #d4af37; }
+    li strong { color: #fafafa; }
+    .cta-box { background: linear-gradient(135deg, rgba(212,175,55,0.1) 0%, rgba(212,175,55,0.05) 100%); border: 1px solid rgba(212,175,55,0.3); border-radius: 1rem; padding: 2rem; text-align: center; margin-top: 2rem; }
+    .cta-box h2 { border: none; padding: 0; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 1.5rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.875rem 1.75rem; border-radius: 9999px; font-weight: 500; text-decoration: none; transition: all 0.3s; }
     .btn-primary { background: #d4af37; color: #0a0a0a; }
-    .btn-primary:hover { background: #c9a430; }
+    .btn-primary:hover { background: #c9a430; transform: translateY(-2px); }
     .btn-secondary { border: 1px solid #d4af37; color: #d4af37; background: transparent; }
     .btn-secondary:hover { background: rgba(212,175,55,0.1); }
-    footer { margin-top: 2rem; font-size: 0.75rem; color: #52525b; }
+    footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(212,175,55,0.1); text-align: center; }
+    .footer-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1rem; margin-bottom: 1rem; }
+    .footer-nav a { color: #71717a; text-decoration: none; font-size: 0.875rem; }
+    .footer-nav a:hover { color: #d4af37; }
+    .copyright { font-size: 0.75rem; color: #52525b; }
   </style>
 </head>
 <body>
-  <main itemscope itemtype="https://schema.org/Product">
-    <h1 itemprop="name">Cartão Aurum – Gaste Crypto como Dinheiro Físico</h1>
-    <p itemprop="description">USDT aceito globalmente com Visa/Mastercard integrado. Saque em caixas eletrônicos! O cartão crypto perfeito para uso no dia a dia.</p>
-    <img src="https://aurumfoundation.top/images/og-card.jpg" alt="Cartão Aurum - Crypto Card" itemprop="image">
-    <div class="buttons">
-      <a href="https://aurumfoundation.top" class="btn btn-primary">← Voltar para Home</a>
-      <a href="https://backoffice.aurum.foundation/u/5CW428" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Cadastre-se Agora →</a>
-    </div>
-    <footer>© 2026 Aurum Foundation - Todos os direitos reservados</footer>
-  </main>
+  <div class="container">
+    <header>
+      <span class="badge">Cartão Premium</span>
+      <h1>Aurum Card: Seu Cartão Cripto com Recompensas Exclusivas</h1>
+      <p class="intro">O Aurum Card é mais do que um cartão de débito — é uma chave para o ecossistema Aurum. Use-o para compras diárias, saques e recargas, e ganhe recompensas baseadas no seu nível Legacy. Quanto mais alto seu nível, maiores as recompensas.</p>
+      <img src="https://aurumfoundation.top/images/og-card.jpg" alt="Aurum Card - Cartão Cripto Premium" loading="lazy">
+    </header>
+    
+    <main itemscope itemtype="https://schema.org/Product">
+      <meta itemprop="name" content="Aurum Card">
+      <meta itemprop="description" content="Cartão de débito cripto com recompensas exclusivas do ecossistema Aurum.">
+      
+      <section>
+        <h2>Benefícios do Aurum Card</h2>
+        <ul>
+          <li><strong>Recompensas por Transação:</strong> Ganhe até 100% do Legacy Volume gerado por suas compras, dependendo do seu nível no programa de parceiros. Cada compra gera valor para você e sua equipe.</li>
+          <li><strong>Integração com Profitshare:</strong> As taxas de transação são compartilhadas com base no seu Legacy Level, aumentando sua renda passiva a cada uso do cartão.</li>
+          <li><strong>Design Premium:</strong> Cartão físico e virtual com design moderno e elegante, disponível em várias cores e estilos exclusivos para combinar com seu estilo de vida.</li>
+          <li><strong>Segurança Avançada:</strong> Tecnologia de chip EMV, autenticação biométrica e notificações em tempo real para proteger todas as suas transações contra fraudes.</li>
+        </ul>
+      </section>
+      
+      <section>
+        <h2>Como o Cartão Impulsiona Seu Crescimento?</h2>
+        <p>Cada vez que você usa o Aurum Card, você não só paga por seus produtos — você gera valor para sua equipe e para si mesmo. As transações contribuem para o Legacy Volume, acelerando seu progresso nos níveis Legacy e aumentando sua participação nos bônus diários de Profitshare.</p>
+        <p>O cartão é aceito globalmente em milhões de estabelecimentos que aceitam bandeiras Visa e Mastercard. Você pode usar em restaurantes, lojas online, supermercados, postos de gasolina e muito mais — tudo isso enquanto acumula recompensas em criptomoedas.</p>
+        <p>Com o Aurum Card, sua vida financeira se torna mais simples e mais rentável. Gerencie seus gastos, acompanhe suas recompensas e aproveite benefícios exclusivos diretamente pelo Aurum NeoBank App.</p>
+      </section>
+      
+      <section class="cta-box">
+        <h2>Peça Seu Cartão Hoje</h2>
+        <p>Conecte seu cartão ao NeoBank App e comece a ganhar recompensas imediatamente. Maximize seus benefícios com o Aurum Card e transforme cada compra em uma oportunidade de crescimento.</p>
+        <div class="buttons">
+          <a href="https://backoffice.aurum.foundation/u/5CW428" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Cadastre-se Agora →</a>
+          <a href="/share/neo-bank" class="btn btn-secondary">Conhecer o NeoBank</a>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <nav class="footer-nav">
+        <a href="/share/ex-ai-bot">EX-AI Bot</a>
+        <a href="/share/zeus-ai-bot">Zeus AI Bot</a>
+        <a href="/share/flash-loans">Flash Loans</a>
+        <a href="/share/neo-bank">Neo Bank</a>
+        <a href="/share/exchange">Exchange</a>
+        <a href="/share/token">Token</a>
+      </nav>
+      <p class="copyright">© 2026 Aurum Foundation - Todos os direitos reservados</p>
+    </footer>
+  </div>
 </body>
 </html>
