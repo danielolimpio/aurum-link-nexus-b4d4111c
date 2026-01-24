@@ -13,4 +13,8 @@ Allow: /
 User-agent: *
 Allow: /
 
+# Sitemap location
 Sitemap: https://aurumfoundation.top/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
