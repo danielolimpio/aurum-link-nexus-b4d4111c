@@ -117,7 +117,15 @@ const Index = () => {
           </div>
 
           {/* Footer */}
-          <footer className="text-center text-muted-foreground/50 text-xs mt-12">
+          <footer className="text-center text-muted-foreground/50 text-xs mt-12 space-y-2">
+            <nav aria-label="Links do rodapé">
+              <a 
+                href="/sitemap" 
+                className="text-primary/70 hover:text-primary transition-colors underline underline-offset-2"
+              >
+                Sitemap
+              </a>
+            </nav>
             <p>© {new Date().getFullYear()} <strong>Aurum Foundation</strong> | Todos os direitos reservados | Desenvolvido por{" "}
               <a 
                 href="https://danielolimpio.com" 
