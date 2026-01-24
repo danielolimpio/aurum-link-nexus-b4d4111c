@@ -6,7 +6,7 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://aurumfoundation.top/sitemap">
   <title>Sitemap | Aurum Foundation</title>
-  <meta name="description" content="Mapa do site Aurum Foundation. Encontre todas as páginas: produtos, serviços, bots de IA, exchange, neo-bank, cartão crypto e mais.">
+  <meta name="description" content="Mapa do site Aurum Foundation. Encontre todas as páginas: produtos, serviços, bots de IA, exchange, neo-bank, cartão crypto e contato.">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -34,91 +34,108 @@
     .container { max-width: 48rem; margin: 0 auto; }
     h1 { font-size: 2rem; font-weight: 700; color: #d4af37; margin-bottom: 0.5rem; }
     .subtitle { color: #a1a1aa; margin-bottom: 2rem; }
-    .sitemap-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
-    .sitemap-item { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1.25rem; transition: all 0.3s; }
+    .sitemap-section { margin-bottom: 2rem; }
+    .section-title { font-size: 1rem; color: #71717a; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(212,175,55,0.2); }
+    .sitemap-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .sitemap-item { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); border-radius: 0.75rem; padding: 1rem 1.25rem; transition: all 0.3s; }
     .sitemap-item:hover { border-color: #d4af37; background: rgba(212,175,55,0.05); }
-    .sitemap-item a { text-decoration: none; display: block; }
-    .sitemap-item h2 { font-size: 1.125rem; color: #d4af37; margin-bottom: 0.25rem; }
-    .sitemap-item p { font-size: 0.875rem; color: #a1a1aa; margin-bottom: 0.5rem; }
+    .sitemap-item a { text-decoration: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .sitemap-item h2 { font-size: 1rem; color: #d4af37; font-weight: 500; }
     .sitemap-item .url { font-size: 0.75rem; color: #52525b; font-family: monospace; }
-    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 2rem; padding: 0.75rem 1.5rem; background: #d4af37; color: #0a0a0a; text-decoration: none; border-radius: 9999px; font-weight: 500; }
-    .back-link:hover { background: #c9a430; }
-    .xml-link { display: block; margin-top: 1.5rem; color: #d4af37; text-decoration: underline; font-size: 0.875rem; }
-    footer { margin-top: 3rem; text-align: center; font-size: 0.75rem; color: #52525b; }
+    .back-link { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 2rem; padding: 0.75rem 1.5rem; background: #d4af37; color: #0a0a0a; text-decoration: none; border-radius: 9999px; font-weight: 500; transition: all 0.3s; }
+    .back-link:hover { background: #c9a430; transform: translateY(-2px); }
+    .xml-link { display: inline-block; margin-left: 1rem; margin-top: 2rem; color: #d4af37; text-decoration: none; font-size: 0.875rem; padding: 0.75rem 1.5rem; border: 1px solid #d4af37; border-radius: 9999px; transition: all 0.3s; }
+    .xml-link:hover { background: rgba(212,175,55,0.1); }
+    footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(212,175,55,0.1); text-align: center; font-size: 0.75rem; color: #52525b; }
   </style>
 </head>
 <body>
   <main class="container" itemscope itemtype="https://schema.org/WebPage">
     <h1 itemprop="name">Sitemap</h1>
-    <p class="subtitle" itemprop="description">Mapa completo do site Aurum Foundation</p>
+    <p class="subtitle" itemprop="description">Mapa completo do site Aurum Foundation — todas as páginas indexáveis</p>
     
     <nav aria-label="Mapa do site">
-      <ul class="sitemap-list" itemscope itemtype="https://schema.org/SiteNavigationElement">
-        <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
-          <a href="https://aurumfoundation.top" itemprop="url">
-            <h2 itemprop="name">Página Inicial</h2>
-            <p itemprop="description">Home da Aurum Foundation - Plataforma de investimento em USDT</p>
-            <span class="url">https://aurumfoundation.top</span>
-          </a>
-        </li>
-        <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
-          <a href="https://aurumfoundation.top/share/ex-ai-bot" itemprop="url">
-            <h2 itemprop="name">EX-AI Bot</h2>
-            <p itemprop="description">Automação inteligente para seus ativos com IA avançada</p>
-            <span class="url">https://aurumfoundation.top/share/ex-ai-bot</span>
-          </a>
-        </li>
-        <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
-          <a href="https://aurumfoundation.top/share/zeus-ai-bot" itemprop="url">
-            <h2 itemprop="name">Zeus AI Bot</h2>
-            <p itemprop="description">Algoritmos de alta frequência para maximizar retornos</p>
-            <span class="url">https://aurumfoundation.top/share/zeus-ai-bot</span>
-          </a>
-        </li>
-        <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
-          <a href="https://aurumfoundation.top/share/flash-loans" itemprop="url">
-            <h2 itemprop="name">Flash Loans</h2>
-            <p itemprop="description">Empréstimos instantâneos sem garantia na blockchain</p>
-            <span class="url">https://aurumfoundation.top/share/flash-loans</span>
-          </a>
-        </li>
-        <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
-          <a href="https://aurumfoundation.top/share/neo-bank" itemprop="url">
-            <h2 itemprop="name">Neo-Bank</h2>
-            <p itemprop="description">Banco digital em USDT com conta e rendimento</p>
-            <span class="url">https://aurumfoundation.top/share/neo-bank</span>
-          </a>
-        </li>
-        <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
-          <a href="https://aurumfoundation.top/share/card" itemprop="url">
-            <h2 itemprop="name">Cartão Aurum</h2>
-            <p itemprop="description">Gaste crypto como dinheiro físico com Visa/Mastercard</p>
-            <span class="url">https://aurumfoundation.top/share/card</span>
-          </a>
-        </li>
-        <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
-          <a href="https://aurumfoundation.top/share/exchange" itemprop="url">
-            <h2 itemprop="name">Exchange</h2>
-            <p itemprop="description">Negocie com zero taxas e alta liquidez</p>
-            <span class="url">https://aurumfoundation.top/share/exchange</span>
-          </a>
-        </li>
-        <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
-          <a href="https://aurumfoundation.top/share/token" itemprop="url">
-            <h2 itemprop="name">$AURUM Token</h2>
-            <p itemprop="description">O token oficial do ecossistema Aurum Foundation</p>
-            <span class="url">https://aurumfoundation.top/share/token</span>
-          </a>
-        </li>
-      </ul>
+      <div class="sitemap-section">
+        <h3 class="section-title">Página Principal</h3>
+        <ul class="sitemap-list" itemscope itemtype="https://schema.org/SiteNavigationElement">
+          <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
+            <a href="https://aurumfoundation.top" itemprop="url">
+              <h2 itemprop="name">Home</h2>
+              <span class="url">aurumfoundation.top</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="sitemap-section">
+        <h3 class="section-title">Produtos e Serviços</h3>
+        <ul class="sitemap-list">
+          <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
+            <a href="https://aurumfoundation.top/share/ex-ai-bot" itemprop="url">
+              <h2 itemprop="name">EX-AI Bot</h2>
+              <span class="url">/share/ex-ai-bot</span>
+            </a>
+          </li>
+          <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
+            <a href="https://aurumfoundation.top/share/zeus-ai-bot" itemprop="url">
+              <h2 itemprop="name">Zeus AI Bot</h2>
+              <span class="url">/share/zeus-ai-bot</span>
+            </a>
+          </li>
+          <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
+            <a href="https://aurumfoundation.top/share/flash-loans" itemprop="url">
+              <h2 itemprop="name">Flash Loans</h2>
+              <span class="url">/share/flash-loans</span>
+            </a>
+          </li>
+          <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
+            <a href="https://aurumfoundation.top/share/neo-bank" itemprop="url">
+              <h2 itemprop="name">Neo Bank</h2>
+              <span class="url">/share/neo-bank</span>
+            </a>
+          </li>
+          <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
+            <a href="https://aurumfoundation.top/share/card" itemprop="url">
+              <h2 itemprop="name">Aurum Card</h2>
+              <span class="url">/share/card</span>
+            </a>
+          </li>
+          <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
+            <a href="https://aurumfoundation.top/share/exchange" itemprop="url">
+              <h2 itemprop="name">Exchange</h2>
+              <span class="url">/share/exchange</span>
+            </a>
+          </li>
+          <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
+            <a href="https://aurumfoundation.top/share/token" itemprop="url">
+              <h2 itemprop="name">Aurum Token</h2>
+              <span class="url">/share/token</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="sitemap-section">
+        <h3 class="section-title">Institucional</h3>
+        <ul class="sitemap-list">
+          <li class="sitemap-item" itemprop="hasPart" itemscope itemtype="https://schema.org/WebPage">
+            <a href="https://aurumfoundation.top/contato" itemprop="url">
+              <h2 itemprop="name">Contato</h2>
+              <span class="url">/contato</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
     
-    <a href="https://aurumfoundation.top" class="back-link">← Voltar para Home</a>
-    <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" class="xml-link">Ver sitemap.xml</a>
+    <div>
+      <a href="https://aurumfoundation.top" class="back-link">← Voltar para Home</a>
+      <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" class="xml-link">sitemap.xml</a>
+    </div>
     
     <footer>
       <p>© 2026 Aurum Foundation - Todos os direitos reservados</p>
-      <p style="margin-top: 0.5rem;">Última atualização: Janeiro 2026</p>
+      <p style="margin-top: 0.5rem;">Última atualização: 24 de Janeiro de 2026</p>
     </footer>
   </main>
 </body>
