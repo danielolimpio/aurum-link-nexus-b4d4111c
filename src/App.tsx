@@ -14,6 +14,7 @@ import NeoBank from "./pages/share/NeoBank";
 import Card from "./pages/share/Card";
 import Exchange from "./pages/share/Exchange";
 import Token from "./pages/share/Token";
+import Sitemap from "./pages/Sitemap";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,9 @@ const App = () => (
           <Route path="/share/card" element={<Card />} />
           <Route path="/share/exchange" element={<Exchange />} />
           <Route path="/share/token" element={<Token />} />
+          
+          {/* Sitemap */}
+          <Route path="/sitemap" element={<Sitemap />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
