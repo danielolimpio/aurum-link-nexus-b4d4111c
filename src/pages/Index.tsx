@@ -6,7 +6,7 @@ import SocialIcon from "@/components/SocialIcon";
 import VideoEmbed from "@/components/VideoEmbed";
 import ImageCarousel from "@/components/ImageCarousel";
 import ZoomLiveButton from "@/components/ZoomLiveButton";
-
+import ExpandableContent from "@/components/ExpandableContent";
 const Index = () => {
   const links = [
     {
@@ -65,12 +65,15 @@ const Index = () => {
           </h1>
 
           {/* Meta Description with keyword */}
-          <p className="text-muted-foreground text-center text-sm md:text-base mb-8 opacity-0 animate-fade-in-up animation-delay-200" itemProp="description">
+          <p className="text-muted-foreground text-center text-sm md:text-base mb-4 opacity-0 animate-fade-in-up animation-delay-200" itemProp="description">
             A <strong>Aurum Foundation</strong> é um ecossistema líder em tecnologia financeira, impulsionado por Inteligência Artificial e Blockchain.
           </p>
 
+          {/* Expandable SEO Content */}
+          <ExpandableContent />
+
           {/* Video Section */}
-          <div className="mb-8">
+          <div className="mb-8 mt-4">
             <VideoEmbed videoUrl="https://www.youtube.com/watch?v=aPk6FUIHnSs" />
           </div>
 
