@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 
 interface SharePageLayoutProps {
   title: string;
@@ -9,19 +10,11 @@ interface SharePageLayoutProps {
 }
 
 const SharePageLayout = ({ title, description, imageUrl, canonicalUrl }: SharePageLayoutProps) => {
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      window.location.href = "https://aurumfoundation.top/";
-    }, 2000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <>
       <Helmet>
         <html lang="pt-BR" />
-        <title>{title}</title>
+        <title>{title} | Aurum Foundation</title>
         <meta name="description" content={description} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={canonicalUrl} />
@@ -46,15 +39,42 @@ const SharePageLayout = ({ title, description, imageUrl, canonicalUrl }: SharePa
         <meta name="twitter:image" content={imageUrl} />
       </Helmet>
       
-      <div className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground">
-        <div className="text-center space-y-4 p-8">
-          <h1 className="text-2xl font-bold">{title}</h1>
-          <p className="text-muted-foreground">{description}</p>
-          <p className="text-sm text-muted-foreground animate-pulse">
-            Redirecionando para Aurum Foundation...
+      <main className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground p-4">
+        <article className="text-center space-y-6 max-w-lg" itemScope itemType="https://schema.org/Product">
+          <h1 className="text-2xl md:text-3xl font-bold text-primary" itemProp="name">{title}</h1>
+          <p className="text-muted-foreground text-lg" itemProp="description">{description}</p>
+          
+          <img 
+            src={imageUrl} 
+            alt={title}
+            className="w-full rounded-lg shadow-lg"
+            itemProp="image"
+          />
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <Link 
+              to="/"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors font-medium"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Voltar para Home
+            </Link>
+            <a 
+              href="https://backoffice.aurum.foundation/u/5CW428"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors font-medium"
+            >
+              Cadastre-se Agora
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </div>
+          
+          <p className="text-xs text-muted-foreground/60 pt-8">
+            © {new Date().getFullYear()} Aurum Foundation - Todos os direitos reservados
           </p>
-        </div>
-      </div>
+        </article>
+      </main>
     </>
   );
 };
