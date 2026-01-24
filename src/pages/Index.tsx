@@ -122,7 +122,28 @@ const Index = () => {
           </div>
 
           {/* Footer */}
-          <footer className="text-center text-muted-foreground/50 text-xs mt-12 space-y-2">
+          <footer className="text-center text-muted-foreground/50 text-xs mt-12 space-y-4">
+            {/* Products Navigation */}
+            <nav aria-label="Produtos Aurum" className="py-4 border-t border-b border-primary/10">
+              <p className="text-muted-foreground/40 text-[10px] uppercase tracking-widest mb-3">Nossos Produtos</p>
+              <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+                <a href="/share/ex-ai-bot" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">EX-AI Bot</a>
+                <span className="text-primary/20">•</span>
+                <a href="/share/zeus-ai-bot" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">Zeus Bot</a>
+                <span className="text-primary/20">•</span>
+                <a href="/share/flash-loans" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">Flash Loans</a>
+                <span className="text-primary/20">•</span>
+                <a href="/share/neo-bank" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">Neo Bank</a>
+                <span className="text-primary/20">•</span>
+                <a href="/share/card" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">Card</a>
+                <span className="text-primary/20">•</span>
+                <a href="/share/exchange" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">Exchange</a>
+                <span className="text-primary/20">•</span>
+                <a href="/share/token" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">Token</a>
+              </div>
+            </nav>
+            
+            {/* Sitemap Link */}
             <nav aria-label="Links do rodapé">
               <a 
                 href="/sitemap" 
@@ -131,6 +152,8 @@ const Index = () => {
                 Sitemap
               </a>
             </nav>
+            
+            {/* Copyright */}
             <p>© {new Date().getFullYear()} <strong>Aurum Foundation</strong> | Todos os direitos reservados | Desenvolvido por{" "}
               <a 
                 href="https://danielolimpio.com" 
