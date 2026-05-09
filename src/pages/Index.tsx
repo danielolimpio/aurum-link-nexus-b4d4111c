@@ -7,6 +7,40 @@ import VideoEmbed from "@/components/VideoEmbed";
 import ImageCarousel from "@/components/ImageCarousel";
 import ZoomLiveButton from "@/components/ZoomLiveButton";
 import ExpandableContent from "@/components/ExpandableContent";
+import FAQSection from "@/components/FAQSection";
+
+const homeFaqs = [
+  {
+    question: "O que é a Aurum Foundation?",
+    answer:
+      "A Aurum Foundation é uma plataforma global de multiplicação de capital em USDT, sediada em Dubai, que utiliza Inteligência Artificial e Blockchain para gerar rendimentos diários em criptomoedas com segurança, transparência e auditoria on-chain.",
+  },
+  {
+    question: "Como funciona o investimento na Aurum Foundation?",
+    answer:
+      "Você deposita USDT em sua conta Aurum Foundation e os robôs proprietários EX-AI Bot e Zeus AI Bot operam automaticamente em arbitragem e flash loans em mais de 100 exchanges, distribuindo os rendimentos diariamente em sua carteira.",
+  },
+  {
+    question: "A Aurum Foundation é segura e regulamentada?",
+    answer:
+      "Sim. A Aurum Foundation opera com infraestrutura corporativa em Dubai, contratos inteligentes auditáveis em Blockchain e processos rigorosos de KYC, garantindo segurança e rastreabilidade total das operações.",
+  },
+  {
+    question: "Qual o valor mínimo para começar na Aurum Foundation?",
+    answer:
+      "O cadastro na Aurum Foundation é 100% gratuito. Você pode iniciar suas operações com valores acessíveis em USDT, conforme o pacote escolhido dentro da plataforma oficial.",
+  },
+  {
+    question: "Quais produtos a Aurum Foundation oferece?",
+    answer:
+      "A Aurum Foundation oferece um ecossistema completo: EX-AI Bot, Zeus AI Bot, Flash Loans, NeoBank cripto, Aurum Card internacional, Aurum Exchange própria e o Token AURUM nativo.",
+  },
+  {
+    question: "Como recebo meus rendimentos da Aurum Foundation?",
+    answer:
+      "Os rendimentos são creditados automaticamente em USDT na sua conta Aurum Foundation e podem ser sacados a qualquer momento via rede TRC20 ou BEP20, sem burocracia.",
+  },
+];
 const Index = () => {
   const links = [
     {
