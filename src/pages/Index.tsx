@@ -142,6 +142,9 @@ const Index = () => {
             <ImageCarousel />
           </section>
 
+          {/* FAQ Section - SEO Rich Results */}
+          <FAQSection items={homeFaqs} />
+
           {/* Social Icons */}
           <div className="flex justify-center gap-4 items-center">
             {socialLinks.map((social) => (
