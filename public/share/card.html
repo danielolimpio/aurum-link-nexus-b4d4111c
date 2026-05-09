@@ -81,7 +81,68 @@
     .footer-nav a { color: #71717a; text-decoration: none; font-size: 0.875rem; }
     .footer-nav a:hover { color: #d4af37; }
     .copyright { font-size: 0.75rem; color: #52525b; }
+  
+.faq-section { margin-bottom: 2.5rem; }
+.faq-section h2 { font-size: 1.5rem; font-weight: 600; color: #fafafa; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(212,175,55,0.15); }
+.faq-item { border: 1px solid rgba(212,175,55,0.2); background: rgba(212,175,55,0.05); border-radius: .5rem; margin-bottom: .75rem; overflow: hidden; }
+.faq-item summary { cursor: pointer; padding: .9rem 1rem; font-weight: 500; color: #fafafa; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; color: #d4af37; font-size: 1.25rem; font-weight: 700; transition: transform .2s; }
+.faq-item[open] summary::after { content: "−"; }
+.faq-item summary:hover { background: rgba(212,175,55,0.08); }
+.faq-item .faq-answer { padding: 0 1rem 1rem; color: #a1a1aa; font-size: .95rem; line-height: 1.6; }
+
   </style>
+
+  <!-- FAQPage Schema (Rich Results) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que é o Aurum Card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O Aurum Card é o cartão internacional da Aurum Foundation, aceito em mais de 200 países, permitindo gastar USDT como dinheiro real."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O Aurum Card tem anuidade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O Aurum Card da Aurum Foundation possui condições especiais de isenção conforme o nível Legacy do usuário."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como recarregar o Aurum Card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A recarga do Aurum Card é feita diretamente do saldo USDT da sua conta Aurum Foundation, com conversão automática para a moeda local."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O Aurum Card funciona no Brasil?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O Aurum Card da Aurum Foundation funciona em qualquer estabelecimento da rede Visa/Mastercard no Brasil e exterior."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como solicitar o Aurum Card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Após o cadastro na Aurum Foundation, você solicita o Aurum Card pelo painel e recebe em casa."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <div class="container">

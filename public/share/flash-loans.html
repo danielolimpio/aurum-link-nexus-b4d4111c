@@ -81,7 +81,68 @@
     .footer-nav a { color: #71717a; text-decoration: none; font-size: 0.875rem; }
     .footer-nav a:hover { color: #d4af37; }
     .copyright { font-size: 0.75rem; color: #52525b; }
+  
+.faq-section { margin-bottom: 2.5rem; }
+.faq-section h2 { font-size: 1.5rem; font-weight: 600; color: #fafafa; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(212,175,55,0.15); }
+.faq-item { border: 1px solid rgba(212,175,55,0.2); background: rgba(212,175,55,0.05); border-radius: .5rem; margin-bottom: .75rem; overflow: hidden; }
+.faq-item summary { cursor: pointer; padding: .9rem 1rem; font-weight: 500; color: #fafafa; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; color: #d4af37; font-size: 1.25rem; font-weight: 700; transition: transform .2s; }
+.faq-item[open] summary::after { content: "−"; }
+.faq-item summary:hover { background: rgba(212,175,55,0.08); }
+.faq-item .faq-answer { padding: 0 1rem 1rem; color: #a1a1aa; font-size: .95rem; line-height: 1.6; }
+
   </style>
+
+  <!-- FAQPage Schema (Rich Results) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que são os Flash Loans da Aurum Foundation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Flash Loans são empréstimos relâmpago em DeFi executados pela Aurum Foundation, permitindo operações de arbitragem instantânea em USDT sem necessidade de colateral."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funcionam os Flash Loans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Os Flash Loans da Aurum Foundation tomam emprestado, executam operações lucrativas e devolvem o valor — tudo em uma única transação Blockchain, gerando rendimento puro."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Os Flash Loans são seguros?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. As operações de Flash Loans da Aurum Foundation são executadas via contratos inteligentes auditáveis, com risco zero de inadimplência."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quem pode usar os Flash Loans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Todos os usuários cadastrados na Aurum Foundation podem participar dos rendimentos gerados pelos Flash Loans automaticamente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual o rendimento dos Flash Loans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O rendimento varia conforme volume operado e oportunidades de mercado, sendo distribuído diariamente em USDT pela Aurum Foundation."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <div class="container">

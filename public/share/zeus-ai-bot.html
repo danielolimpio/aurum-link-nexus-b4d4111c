@@ -83,7 +83,68 @@
     .footer-nav a { color: #71717a; text-decoration: none; font-size: 0.875rem; }
     .footer-nav a:hover { color: #d4af37; }
     .copyright { font-size: 0.75rem; color: #52525b; }
+  
+.faq-section { margin-bottom: 2.5rem; }
+.faq-section h2 { font-size: 1.5rem; font-weight: 600; color: #fafafa; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(212,175,55,0.15); }
+.faq-item { border: 1px solid rgba(212,175,55,0.2); background: rgba(212,175,55,0.05); border-radius: .5rem; margin-bottom: .75rem; overflow: hidden; }
+.faq-item summary { cursor: pointer; padding: .9rem 1rem; font-weight: 500; color: #fafafa; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; color: #d4af37; font-size: 1.25rem; font-weight: 700; transition: transform .2s; }
+.faq-item[open] summary::after { content: "−"; }
+.faq-item summary:hover { background: rgba(212,175,55,0.08); }
+.faq-item .faq-answer { padding: 0 1rem 1rem; color: #a1a1aa; font-size: .95rem; line-height: 1.6; }
+
   </style>
+
+  <!-- FAQPage Schema (Rich Results) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que é o Zeus AI Bot da Aurum Foundation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O Zeus AI Bot é o robô premium de trading da Aurum Foundation, com algoritmos avançados de IA para operações de alta performance em USDT."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual a diferença entre Zeus Bot e EX-AI Bot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O Zeus AI Bot opera estratégias mais agressivas e com maior volume, enquanto o EX-AI Bot é voltado para arbitragem clássica. Ambos são produtos oficiais da Aurum Foundation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O Zeus AI Bot opera 24 horas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O Zeus AI Bot da Aurum Foundation opera 24/7 em mais de 100 exchanges globais sem necessidade de intervenção manual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como ativar o Zeus AI Bot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Após o cadastro na Aurum Foundation, você pode ativar o Zeus AI Bot diretamente no seu painel de investimentos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Os rendimentos do Zeus AI Bot são em USDT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Todos os rendimentos do Zeus AI Bot são creditados em USDT na conta Aurum Foundation do usuário."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <div class="container">
