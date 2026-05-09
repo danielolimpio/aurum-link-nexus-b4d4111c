@@ -83,7 +83,68 @@
     .footer-nav a { color: #71717a; text-decoration: none; font-size: 0.875rem; }
     .footer-nav a:hover { color: #d4af37; }
     .copyright { font-size: 0.75rem; color: #52525b; }
+  
+.faq-section { margin-bottom: 2.5rem; }
+.faq-section h2 { font-size: 1.5rem; font-weight: 600; color: #fafafa; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(212,175,55,0.15); }
+.faq-item { border: 1px solid rgba(212,175,55,0.2); background: rgba(212,175,55,0.05); border-radius: .5rem; margin-bottom: .75rem; overflow: hidden; }
+.faq-item summary { cursor: pointer; padding: .9rem 1rem; font-weight: 500; color: #fafafa; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: .5rem; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; color: #d4af37; font-size: 1.25rem; font-weight: 700; transition: transform .2s; }
+.faq-item[open] summary::after { content: "−"; }
+.faq-item summary:hover { background: rgba(212,175,55,0.08); }
+.faq-item .faq-answer { padding: 0 1rem 1rem; color: #a1a1aa; font-size: .95rem; line-height: 1.6; }
+
   </style>
+
+  <!-- FAQPage Schema (Rich Results) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que é a Aurum Exchange?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Aurum Exchange é a corretora oficial da Aurum Foundation para compra, venda e troca de criptomoedas com taxas reduzidas e liquidez global."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais moedas a Aurum Exchange suporta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Aurum Exchange da Aurum Foundation suporta USDT, BTC, ETH, BNB, AURUM Token e mais de 50 criptoativos principais."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quais são as taxas da Aurum Exchange?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Aurum Exchange oferece taxas competitivas reduzidas para usuários cadastrados na Aurum Foundation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A Aurum Exchange é segura?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. A Aurum Exchange usa cold wallets, autenticação 2FA e auditoria contínua, padrão Aurum Foundation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como acessar a Aurum Exchange?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O acesso à Aurum Exchange é liberado automaticamente após o cadastro gratuito na Aurum Foundation."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <div class="container">
