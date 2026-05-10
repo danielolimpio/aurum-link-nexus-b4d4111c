@@ -4,11 +4,12 @@ import { LineChart, Shield, Bot, Zap } from "lucide-react";
 const Exchange = () => {
   return (
     <SharePagePremium
-      title="Aurum Exchange: Negocie Criptomoedas com Segurança e Velocidade"
+      title="Aurum Exchange | Plataforma DeFi de Trading de Criptomoedas"
       subtitle="Exchange Pública"
-      description="A Aurum Exchange é a plataforma de negociação pública do ecossistema Aurum com interface intuitiva, taxas baixas e execução rápida."
+      description="Aurum Exchange é a Plataforma DeFi de Trading de Criptomoedas da Aurum Foundation: taxas baixas, alta liquidez e segurança institucional para investidores."
       imageUrl="https://aurumfoundation.top/images/og-exchange.jpg"
       canonicalUrl="https://aurumfoundation.top/share/exchange"
+      keywords="Aurum Exchange, Aurum Foundation, Plataforma DeFi, Trading de Criptomoedas, exchange cripto, USDT, liquidez"
       introText="A Aurum Exchange é a plataforma de negociação pública do ecossistema Aurum. Projetada para usuários de todos os níveis, ela oferece uma interface intuitiva, taxas baixas e execução rápida de ordens — tudo dentro de um ambiente seguro e regulado."
       sectionTitle="Recursos da Aurum Exchange"
       features={[

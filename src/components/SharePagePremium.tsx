@@ -15,6 +15,7 @@ interface SharePagePremiumProps {
   description: string;
   imageUrl: string;
   canonicalUrl: string;
+  keywords?: string;
   introText: string;
   sectionTitle: string;
   features: FeatureItem[];
@@ -31,6 +32,7 @@ const SharePagePremium = ({
   description,
   imageUrl,
   canonicalUrl,
+  keywords,
   introText,
   sectionTitle,
   features,
@@ -46,6 +48,7 @@ const SharePagePremium = ({
         <html lang="pt-BR" />
         <title>{title} | Aurum Foundation</title>
         <meta name="description" content={description} />
+        {keywords && <meta name="keywords" content={keywords} />}
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={canonicalUrl} />
         

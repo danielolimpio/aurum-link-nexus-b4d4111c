@@ -4,11 +4,12 @@ import { Wallet, ArrowUpDown, CreditCard, RefreshCcw } from "lucide-react";
 const NeoBank = () => {
   return (
     <SharePagePremium
-      title="Aurum NeoBank App: Sua Conta Cripto Moderna e Segura"
+      title="Aurum Neobank | Conta Cripto e Banco Digital da Aurum Foundation"
       subtitle="Banco Digital"
-      description="O Aurum NeoBank App é a conta bancária do futuro — projetada para o mundo digital com criptomoedas e cartões integrados."
+      description="Aurum Neobank é o banco digital cripto da Aurum Foundation: conta multimoeda em USDT, integração com Aurum Card e Aurum Exchange na Plataforma DeFi."
       imageUrl="https://aurumfoundation.top/images/og-neo-bank.jpg"
       canonicalUrl="https://aurumfoundation.top/share/neo-bank"
+      keywords="Aurum Neobank, Aurum Foundation, banco digital cripto, Aurum Card, Plataforma DeFi, USDT, conta cripto"
       introText="O Aurum NeoBank App é a conta bancária do futuro — projetada para o mundo digital. Com acesso a criptomoedas, cartões físicos e virtuais, e integração completa com o ecossistema Aurum, ele oferece conveniência e controle total sobre seu dinheiro."
       sectionTitle="Recursos do NeoBank App"
       features={[

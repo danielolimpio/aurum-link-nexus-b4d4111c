@@ -1,4 +1,10 @@
+# Aurum Foundation - robots.txt
+# https://aurumfoundation.top
+
 User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
 Allow: /
 
 User-agent: Bingbot
@@ -10,11 +16,22 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: LinkedInBot
 Allow: /
 
-# Sitemap location
+User-agent: Applebot
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Canonical host
+Host: https://aurumfoundation.top
+
+# Sitemap
 Sitemap: https://aurumfoundation.top/sitemap.xml
 
-# Crawl-delay for polite crawling
+# Crawl-delay
 Crawl-delay: 1

@@ -4,11 +4,12 @@ import { Zap, ShieldCheck, Layers, Lock } from "lucide-react";
 const FlashLoans = () => {
   return (
     <SharePagePremium
-      title="Aurum Flash Loans: Empréstimos Instantâneos, Sem Colateral"
+      title="Flash Loans Aurum Foundation | Empréstimos DeFi Instantâneos"
       subtitle="Liquidez Instantânea"
-      description="Com as Aurum Flash Loans, você pode acessar capital imediatamente, sem necessidade de colateral. Perfeito para traders e empreendedores."
+      description="Flash Loans da Aurum Foundation: empréstimos DeFi instantâneos sem colateral para Trading de Criptomoedas e arbitragem na Plataforma DeFi Aurum."
       imageUrl="https://aurumfoundation.top/images/og-flash-loans.jpg"
       canonicalUrl="https://aurumfoundation.top/share/flash-loans"
+      keywords="Flash Loans, Aurum Foundation, Plataforma DeFi, Trading de Criptomoedas, empréstimo cripto, arbitragem, USDT"
       introText="Com as Aurum Flash Loans, você pode acessar capital imediatamente, sem necessidade de colateral. Perfeito para traders e empreendedores que precisam de liquidez rápida para aproveitar oportunidades no mercado."
       sectionTitle="Como Funcionam as Flash Loans?"
       features={[
