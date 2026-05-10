@@ -56,7 +56,7 @@ const Index = () => {
       delay: "animation-delay-500",
     },
     {
-      href: "https://wa.me/5512981408992",
+      href: "https://wa.me/5512982519116",
       icon: MessageCircle,
       label: "Suporte WhatsApp",
       delay: "animation-delay-600",
