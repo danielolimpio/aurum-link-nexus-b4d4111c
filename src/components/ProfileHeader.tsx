@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ArrowUp } from "lucide-react";
 import aurumLogo from "@/assets/aurum-logo.jpg";
 import blockchainBanner from "@/assets/aurum-banner.jpg";
 import StoriesViewer from "./StoriesViewer";
@@ -45,6 +46,14 @@ const ProfileHeader = () => {
                 />
               </div>
             </div>
+          </button>
+          <button
+            onClick={() => setIsStoriesOpen(true)}
+            aria-label="Ver Stories"
+            className="absolute left-full top-1/2 -translate-y-1/2 ml-2 flex items-center gap-0.5 text-[10px] md:text-xs text-muted-foreground/70 hover:text-primary transition-colors whitespace-nowrap"
+          >
+            <ArrowUp className="w-2.5 h-2.5 md:w-3 md:h-3" />
+            <span>Ver Stories</span>
           </button>
         </div>
       </div>
