@@ -4,11 +4,12 @@ import { Gift, TrendingUp, Sparkles, ShieldCheck } from "lucide-react";
 const Card = () => {
   return (
     <SharePagePremium
-      title="Aurum Card: Seu Cartão Cripto com Recompensas Exclusivas"
+      title="Aurum Card | Cartão Cripto Internacional Aurum Credit Card"
       subtitle="Cartão Premium"
-      description="O Aurum Card é mais do que um cartão de débito — é uma chave para o ecossistema Aurum com recompensas baseadas no seu nível Legacy."
+      description="Aurum Card é o cartão cripto internacional da Aurum Foundation. Aurum Credit Card com recompensas, integração ao Aurum Neobank e cashback no ecossistema DeFi."
       imageUrl="https://aurumfoundation.top/images/og-card.jpg"
       canonicalUrl="https://aurumfoundation.top/share/card"
+      keywords="Aurum Card, Aurum Credit Card, cartão cripto, Aurum Foundation, Aurum Neobank, USDT, Plataforma DeFi, criptomoedas"
       introText="O Aurum Card é mais do que um cartão de débito — é uma chave para o ecossistema Aurum. Use-o para compras diárias, saques e recargas, e ganhe recompensas baseadas no seu nível Legacy. Quanto mais alto seu nível, maiores as recompensas."
       sectionTitle="Benefícios do Aurum Card"
       features={[

@@ -4,11 +4,12 @@ import { Bot, TrendingUp, Shield, Users } from "lucide-react";
 const ExAiBot = () => {
   return (
     <SharePagePremium
-      title="EX-AI Bot: Seu Assistente de Negociação Inteligente"
+      title="EX-AI Bot | Robô de Trading de Criptomoedas da Aurum Foundation"
       subtitle="Automação com IA"
-      description="O EX-AI Bot é o coração do ecossistema Aurum, projetado para otimizar suas estratégias de trading com inteligência artificial."
+      description="EX-AI Bot é o robô de IA da Aurum Foundation para Trading de Criptomoedas em USDT. Arbitragem automatizada, segurança e rendimentos diários no ecossistema DeFi."
       imageUrl="https://aurumfoundation.top/images/og-ex-ai-bot.jpg"
       canonicalUrl="https://aurumfoundation.top/share/ex-ai-bot"
+      keywords="EX-AI Bot, Aurum Foundation, Trading de Criptomoedas, Plataforma DeFi, USDT, robô de trading, arbitragem cripto, IA"
       introText="O EX-AI Bot é o coração do ecossistema Aurum, projetado para otimizar suas estratégias de trading com inteligência artificial. Ideal para iniciantes e traders experientes, ele opera automaticamente, maximizando seus lucros com segurança e precisão."
       sectionTitle="Características Principais do EX-AI Bot"
       features={[

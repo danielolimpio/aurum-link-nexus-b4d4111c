@@ -4,11 +4,12 @@ import { Coins, CreditCard, Vote, PiggyBank } from "lucide-react";
 const Token = () => {
   return (
     <SharePagePremium
-      title="Aurum Token: O Coração do Ecossistema Aurum"
+      title="Aurum Token | Criptoativo Nativo do Ecossistema Aurum Foundation"
       subtitle="Token Nativo"
-      description="O Aurum Token (AUR) é o ativo nativo do ecossistema Aurum, projetado para impulsionar todas as funcionalidades da plataforma."
+      description="Aurum Token (AUR) é o criptoativo nativo da Aurum Foundation, utilidade em toda a Plataforma DeFi: Aurum Exchange, Aurum Neobank, EX-AI Bot e Aurum Zeus Bot."
       imageUrl="https://aurumfoundation.top/images/og-token.jpg"
       canonicalUrl="https://aurumfoundation.top/share/token"
+      keywords="Aurum Token, Aurum Foundation, criptoativo, Plataforma DeFi, Trading de Criptomoedas, Aurum Exchange, USDT"
       introText="O Aurum Token (AUR) é o ativo nativo do ecossistema Aurum, projetado para impulsionar todas as funcionalidades da plataforma. Desde pagamentos e recompensas até governança e crescimento da comunidade, o token é essencial para o funcionamento e expansão do ecossistema."
       sectionTitle="Usos do Aurum Token"
       features={[
