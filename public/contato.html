@@ -69,10 +69,79 @@
     .footer-nav a { color: #71717a; text-decoration: none; font-size: 0.875rem; }
     .footer-nav a:hover { color: #d4af37; }
     .copyright { font-size: 0.75rem; color: #52525b; }
-  </style>
+  .btn-back-top{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem 1.1rem;border-radius:9999px;border:1px solid rgba(212,175,55,.35);background:rgba(212,175,55,.08);color:#d4af37;text-decoration:none;font-size:.875rem;font-weight:500;transition:all .25s;margin-bottom:1.5rem}.btn-back-top:hover{background:rgba(212,175,55,.18);transform:translateX(-3px)}
+.faq-section{margin:3rem 0 2.5rem;background:rgba(255,255,255,.02);border:1px solid rgba(212,175,55,.15);border-radius:1rem;padding:2rem}
+.faq-section > h2{font-size:1.5rem;font-weight:600;color:#fafafa;margin-bottom:1.25rem;display:flex;align-items:center;gap:.5rem}
+.faq-section > h2::before{content:"✦";color:#d4af37}
+.faq-item{border:1px solid rgba(212,175,55,.2);background:rgba(212,175,55,.05);border-radius:.5rem;margin-bottom:.75rem;overflow:hidden}
+.faq-item summary{cursor:pointer;padding:.9rem 1rem;font-weight:500;color:#fafafa;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";color:#d4af37;font-size:1.25rem;font-weight:700}
+.faq-item[open] summary::after{content:"−"}
+.faq-item summary:hover{background:rgba(212,175,55,.08)}
+.faq-item .faq-answer{padding:0 1rem 1rem;color:#a1a1aa;font-size:.95rem;line-height:1.6}</style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Como entro em contato com a Aurum Foundation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Você pode falar com a Aurum Foundation pelo formulário desta página, pelo e-mail contato@aurumfoundation.top ou pelo WhatsApp oficial +55 12 98140-8992. Atendimento em português, 24/7 via WhatsApp."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual o e-mail oficial de suporte da Aurum Foundation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O e-mail oficial de suporte é contato@aurumfoundation.top. Responderemos sua mensagem em até 24 horas em dias úteis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A Aurum Foundation tem WhatsApp oficial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. O WhatsApp oficial da Aurum Foundation é +55 12 98140-8992, disponível 24/7 para suporte a investidores e parceiros do ecossistema."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Onde fica a sede da Aurum Foundation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A sede global da Aurum Foundation fica em Dubai, Emirados Árabes Unidos, no Business Bay – Executive Tower, um dos principais hubs financeiros do mundo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto tempo a Aurum Foundation leva para responder?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A equipe da Aurum Foundation responde mensagens em até 24 horas úteis pelo formulário e e-mail. No WhatsApp, o atendimento é praticamente imediato."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Posso me tornar parceiro da Aurum Foundation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. A Aurum Foundation possui um Partner Program com bônus diários via Profitshare e Legacy Volume. Selecione 'Parcerias e Negócios' no formulário ou fale pelo WhatsApp para receber detalhes."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
   <div class="container">
+    <a href="/" class="btn-back-top" aria-label="Voltar para a página inicial Aurum Foundation">← Voltar para Home</a>
+
     <header>
       <span class="badge">Fale Conosco</span>
       <h1>Entre em Contato com a Aurum Foundation</h1>
@@ -191,6 +260,16 @@
       </div>
     </main>
     
+    
+      <section class="faq-section" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Perguntas Frequentes – Contato Aurum Foundation</h2>
+        <details class="faq-item"><summary>Como entro em contato com a Aurum Foundation?</summary><div class="faq-answer">Você pode falar com a Aurum Foundation pelo formulário desta página, pelo e-mail contato@aurumfoundation.top ou pelo WhatsApp oficial +55 12 98140-8992. Atendimento em português, 24/7 via WhatsApp.</div></details>
+        <details class="faq-item"><summary>Qual o e-mail oficial de suporte da Aurum Foundation?</summary><div class="faq-answer">O e-mail oficial de suporte é contato@aurumfoundation.top. Responderemos sua mensagem em até 24 horas em dias úteis.</div></details>
+        <details class="faq-item"><summary>A Aurum Foundation tem WhatsApp oficial?</summary><div class="faq-answer">Sim. O WhatsApp oficial da Aurum Foundation é +55 12 98140-8992, disponível 24/7 para suporte a investidores e parceiros do ecossistema.</div></details>
+        <details class="faq-item"><summary>Onde fica a sede da Aurum Foundation?</summary><div class="faq-answer">A sede global da Aurum Foundation fica em Dubai, Emirados Árabes Unidos, no Business Bay – Executive Tower, um dos principais hubs financeiros do mundo.</div></details>
+        <details class="faq-item"><summary>Quanto tempo a Aurum Foundation leva para responder?</summary><div class="faq-answer">A equipe da Aurum Foundation responde mensagens em até 24 horas úteis pelo formulário e e-mail. No WhatsApp, o atendimento é praticamente imediato.</div></details>
+        <details class="faq-item"><summary>Posso me tornar parceiro da Aurum Foundation?</summary><div class="faq-answer">Sim. A Aurum Foundation possui um Partner Program com bônus diários via Profitshare e Legacy Volume. Selecione 'Parcerias e Negócios' no formulário ou fale pelo WhatsApp para receber detalhes.</div></details>
+      </section>
     <footer>
       <nav class="footer-nav">
         <a href="https://aurumfoundation.top">Home</a>
