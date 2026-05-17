@@ -1,0 +1,25 @@
+# Aurum Foundation
+
+> Aurum Foundation é a plataforma DeFi oficial de multiplicação de capital em USDT, com sede em Dubai, baseada em Inteligência Artificial e Blockchain. Oferece bots de trading, flash loans, neobank, cartão cripto, exchange e token próprio.
+
+A Aurum Foundation atende investidores em Brasil, Portugal, Angola e Moçambique, com suporte em português e operações 24/7 em mais de 100 exchanges globais.
+
+## Pages
+
+- [Home](/): Visão geral da Aurum Foundation, produtos e cadastro oficial.
+- [Contato](/contato): Fale com o suporte oficial da Aurum Foundation via WhatsApp e e-mail.
+- [Mapa do Site](/sitemap): Índice de páginas indexáveis.
+
+## Produtos
+
+- [EX-AI Bot](/share/ex-ai-bot): Robô de IA da Aurum Foundation para arbitragem automatizada em USDT.
+- [Aurum Zeus Bot](/share/zeus-ai-bot): Trading bot premium com estratégias avançadas de IA.
+- [Flash Loans](/share/flash-loans): Empréstimos relâmpago em DeFi pela Aurum Foundation.
+- [Aurum Neobank](/share/neo-bank): Banco digital cripto integrado ao ecossistema Aurum.
+- [Aurum Card](/share/card): Cartão cripto internacional Aurum Credit Card com recompensas.
+- [Aurum Exchange](/share/exchange): Corretora própria de criptomoedas da Aurum Foundation.
+- [Aurum Token](/share/token): Criptoativo nativo do ecossistema Aurum Foundation.
+
+## Optional
+
+- [Cadastro Oficial](https://backoffice.aurum.foundation/u/5CW428): Link oficial de cadastro na plataforma.
