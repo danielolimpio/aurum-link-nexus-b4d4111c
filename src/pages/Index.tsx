@@ -80,8 +80,8 @@ const Index = () => {
     <>
       <Helmet>
         <html lang="pt-BR" />
-        <title>Aurum Foundation | Plataforma de Investimento em USDT com IA e Blockchain</title>
-        <meta name="description" content="Aurum Foundation é a plataforma líder em multiplicação de capital em USDT. Tecnologia com IA e Blockchain, sede em Dubai. Cadastre-se e multiplique seu capital com segurança." />
+       <title>Aurum Foundation | Investimento DeFi em USDT com IA</title>
+       <meta name="description" content="Aurum Foundation: plataforma líder em multiplicação de capital em USDT com IA e Blockchain. Sede em Dubai. Cadastre-se com segurança." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://aurumfoundation.top" />
       </Helmet>
