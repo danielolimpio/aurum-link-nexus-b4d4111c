@@ -16,6 +16,10 @@ const ProfileHeader = () => {
             src={blockchainBanner}
             alt="Blockchain Technology Background"
             className="w-full h-auto object-contain"
+            width={1980}
+            height={400}
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="banner-overlay" />
           
