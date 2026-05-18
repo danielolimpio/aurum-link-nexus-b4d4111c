@@ -222,7 +222,7 @@ const SharePagePremium = ({
         {/* Footer */}
         <footer className="py-8 border-t border-primary/10">
           <div className="container max-w-5xl mx-auto px-4 text-center">
-            <p className="text-xs text-muted-foreground/60">
+            <p className="text-xs text-muted-foreground">
               © {new Date().getFullYear()} Aurum Foundation - Todos os direitos reservados
             </p>
           </div>

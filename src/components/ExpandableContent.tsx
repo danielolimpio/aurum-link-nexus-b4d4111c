@@ -42,7 +42,7 @@ const ExpandableContent = () => {
         aria-expanded={isOpen}
         aria-label={isOpen ? "Fechar detalhes" : "Ver mais detalhes"}
       >
-        <span className="text-xs text-muted-foreground/70 group-hover:text-primary/80 transition-colors">
+        <span className="text-xs text-muted-foreground group-hover:text-primary/80 transition-colors">
           {isOpen ? "Fechar" : "Saiba mais"}
         </span>
         <div className={`p-1.5 rounded-full border border-primary/20 bg-primary/5 group-hover:border-primary/40 group-hover:bg-primary/10 transition-all duration-300 ${isOpen ? 'rotate-180' : 'animate-bounce'}`}>
@@ -133,7 +133,7 @@ const ExpandableContent = () => {
           {/* Close Button */}
           <button
             onClick={() => setIsOpen(false)}
-            className="w-full flex items-center justify-center gap-1.5 py-2 text-xs text-muted-foreground/60 hover:text-primary/80 transition-colors"
+            className="w-full flex items-center justify-center gap-1.5 py-2 text-xs text-muted-foreground hover:text-primary/80 transition-colors"
           >
             <ChevronUp className="w-3.5 h-3.5" />
             <span>Fechar</span>

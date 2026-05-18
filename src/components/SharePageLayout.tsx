@@ -70,7 +70,7 @@ const SharePageLayout = ({ title, description, imageUrl, canonicalUrl }: SharePa
             </a>
           </div>
           
-          <p className="text-xs text-muted-foreground/60 pt-8">
+          <p className="text-xs text-muted-foreground pt-8">
             © {new Date().getFullYear()} Aurum Foundation - Todos os direitos reservados
           </p>
         </article>

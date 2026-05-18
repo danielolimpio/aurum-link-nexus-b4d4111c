@@ -159,27 +159,27 @@ const Index = () => {
           </div>
 
           {/* Footer */}
-          <footer className="text-center text-muted-foreground/50 text-xs mt-12 space-y-4">
+          <footer className="text-center text-muted-foreground text-xs mt-12 space-y-4">
             {/* Main Navigation */}
             <nav aria-label="Navegação principal" className="py-4 border-t border-primary/10">
               <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
-                <a href="/" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300 font-medium">Home</a>
+                <a href="/" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">Home</a>
                 <span className="text-primary/20">•</span>
-                <a href="/share/ex-ai-bot" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">EX-AI Bot</a>
+                <a href="/share/ex-ai-bot" className="text-muted-foreground hover:text-primary transition-colors duration-300">EX-AI Bot</a>
                 <span className="text-primary/20">•</span>
-                <a href="/share/zeus-ai-bot" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">Zeus Bot</a>
+                <a href="/share/zeus-ai-bot" className="text-muted-foreground hover:text-primary transition-colors duration-300">Zeus Bot</a>
                 <span className="text-primary/20">•</span>
-                <a href="/share/flash-loans" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">Flash Loans</a>
+                <a href="/share/flash-loans" className="text-muted-foreground hover:text-primary transition-colors duration-300">Flash Loans</a>
                 <span className="text-primary/20">•</span>
-                <a href="/share/neo-bank" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">Neo Bank</a>
+                <a href="/share/neo-bank" className="text-muted-foreground hover:text-primary transition-colors duration-300">Neo Bank</a>
                 <span className="text-primary/20">•</span>
-                <a href="/share/card" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">Card</a>
+                <a href="/share/card" className="text-muted-foreground hover:text-primary transition-colors duration-300">Card</a>
                 <span className="text-primary/20">•</span>
-                <a href="/share/exchange" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">Exchange</a>
+                <a href="/share/exchange" className="text-muted-foreground hover:text-primary transition-colors duration-300">Exchange</a>
                 <span className="text-primary/20">•</span>
-                <a href="/share/token" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300">Token</a>
+                <a href="/share/token" className="text-muted-foreground hover:text-primary transition-colors duration-300">Token</a>
                 <span className="text-primary/20">•</span>
-                <a href="/contato" className="text-muted-foreground/60 hover:text-primary transition-colors duration-300 font-medium">Contato</a>
+                <a href="/contato" className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium">Contato</a>
               </div>
             </nav>
             
