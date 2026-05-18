@@ -2,9 +2,10 @@
 RewriteEngine On
 RewriteBase /
 
-# Force HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Force HTTPS + non-www (canonical: https://aurumfoundation.top)
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ https://aurumfoundation.top/$1 [L,R=301]
 
 # Remove trailing slashes (SEO - canonical URLs)
 RewriteCond %{REQUEST_FILENAME} !-d
