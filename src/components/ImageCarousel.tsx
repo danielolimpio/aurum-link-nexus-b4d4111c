@@ -129,7 +129,10 @@ const ImageCarousel = () => {
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
                 />
+
                 
                 {/* Reflection effect */}
                 <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/50 to-transparent" />

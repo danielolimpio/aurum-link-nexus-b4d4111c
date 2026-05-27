@@ -118,7 +118,10 @@ const StoriesViewer = ({ isOpen, onClose }: StoriesViewerProps) => {
           src={stories[currentIndex].src}
           alt={stories[currentIndex].alt}
           className="max-h-full max-w-full object-contain"
+          loading="lazy"
+          decoding="async"
         />
+
 
         {/* Navigation areas */}
         <button
