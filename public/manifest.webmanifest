@@ -1,0 +1,26 @@
+{
+  "name": "Aurum Foundation",
+  "short_name": "Aurum",
+  "description": "Plataforma DeFi de multiplicação de capital em USDT com IA e Blockchain.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a0a",
+  "theme_color": "#D4AF37",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/favicon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
