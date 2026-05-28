@@ -281,12 +281,23 @@
     <meta name="apple-mobile-web-app-title" content="Aurum" />
     <meta name="mobile-web-app-capable" content="yes" />
     <link rel="manifest" href="/manifest.webmanifest" />
+    <style>
+      /* Prevent flash of unstyled SEO fallback before React hydrates.
+         Googlebot executes JS and sees the React app; non-JS clients still
+         get the indexable content via the <noscript> override below. */
+      #seo-content { display: none !important; }
+      html, body { background: #0a0a0a; }
+    </style>
+    <noscript>
+      <style>#seo-content { display: block !important; }</style>
+    </noscript>
   </head>
 
   <body>
     <div id="root">
-      <!-- Conteúdo SEO inicial: visível ao Googlebot antes do React hidratar.
-           Substituído pela aplicação React quando o JS carrega. -->
+      <!-- Conteúdo SEO inicial: visível ao Googlebot (que executa JS via React)
+           e a crawlers sem JS via <noscript>. Oculto para usuários para evitar
+           flash de conteúdo não estilizado. -->
       <main id="seo-content" style="font-family:system-ui,-apple-system,sans-serif;background:#0a0a0a;color:#fafafa;min-height:100vh;padding:2rem 1rem;max-width:64rem;margin:0 auto;">
         <header style="text-align:center;margin-bottom:2rem;">
           <img src="/favicon.jpg" alt="Aurum Foundation - Logo Oficial" width="120" height="120" style="border-radius:50%;margin-bottom:1rem;" />
