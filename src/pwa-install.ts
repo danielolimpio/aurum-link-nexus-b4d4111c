@@ -1,8 +1,9 @@
 // PWA install trigger using ONLY native browser interfaces.
 // - Android/Chrome & Desktop: captures `beforeinstallprompt` and fires the
-//   native install banner on the first user gesture (click/touch/keydown).
-// - iOS Safari: cannot be triggered programmatically (Apple restriction);
-//   the user must use the native Share → Add to Home Screen flow.
+//   native install prompt as soon as both conditions are met:
+//     (1) the browser has emitted the event, and
+//     (2) the user has produced a gesture (click / touch / keydown).
+// - iOS Safari: cannot be triggered programmatically (Apple restriction).
 // No custom modals or dialogs are rendered.
 
 type BIPEvent = Event & {
@@ -32,52 +33,59 @@ export function setupPwaInstall() {
     return;
   }
 
-  // Register minimal service worker (required by Chrome for installability).
+  // Register service worker ASAP (required by Chrome for installability).
+  // Registering before `load` shortens the time-to-`beforeinstallprompt`.
   if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("/sw.js").catch(() => {
-        /* ignore */
-      });
+    navigator.serviceWorker.register("/sw.js").catch(() => {
+      /* ignore */
     });
   }
 
   let deferredPrompt: BIPEvent | null = null;
+  let userGestured = false;
   let promptShown = false;
 
-  window.addEventListener("beforeinstallprompt", (e) => {
-    // Prevent Chrome's default mini-infobar; we'll trigger the native prompt on user gesture.
-    e.preventDefault();
-    deferredPrompt = e as BIPEvent;
-  });
-
-  const fireNativePrompt = async () => {
-    if (promptShown || !deferredPrompt) return;
+  const tryPrompt = async () => {
+    if (promptShown || !deferredPrompt || !userGestured) return;
     promptShown = true;
+    const evt = deferredPrompt;
+    deferredPrompt = null;
     try {
-      await deferredPrompt.prompt();
-      await deferredPrompt.userChoice;
+      await evt.prompt();
+      await evt.userChoice;
     } catch {
-      /* ignore */
+      // If the gesture window expired, allow a future gesture to retry.
+      promptShown = false;
     } finally {
-      deferredPrompt = null;
       cleanup();
     }
   };
 
+  window.addEventListener("beforeinstallprompt", (e) => {
+    // Prevent Chrome's default mini-infobar; we'll fire the native prompt ourselves.
+    e.preventDefault();
+    deferredPrompt = e as BIPEvent;
+    // If the user already interacted, prompt immediately.
+    void tryPrompt();
+  });
+
   const handler = () => {
-    void fireNativePrompt();
+    userGestured = true;
+    void tryPrompt();
   };
 
   const cleanup = () => {
+    window.removeEventListener("pointerdown", handler);
     window.removeEventListener("click", handler);
     window.removeEventListener("touchend", handler);
     window.removeEventListener("keydown", handler);
   };
 
-  // Fire on the first user gesture (required by browsers for prompt()).
-  window.addEventListener("click", handler, { once: false });
-  window.addEventListener("touchend", handler, { once: false });
-  window.addEventListener("keydown", handler, { once: false });
+  // Capture the first user gesture (required for `prompt()` in some browsers).
+  window.addEventListener("pointerdown", handler);
+  window.addEventListener("click", handler);
+  window.addEventListener("touchend", handler);
+  window.addEventListener("keydown", handler);
 
   window.addEventListener("appinstalled", () => {
     deferredPrompt = null;
