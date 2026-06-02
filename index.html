@@ -329,6 +329,28 @@
     <meta name="apple-mobile-web-app-title" content="Aurum" />
     <meta name="mobile-web-app-capable" content="yes" />
     <link rel="manifest" href="/manifest.webmanifest" />
+    <script>
+      (() => {
+        try {
+          window.__aurumDeferredInstallPrompt = null;
+          window.addEventListener("beforeinstallprompt", (event) => {
+            event.preventDefault();
+            window.__aurumDeferredInstallPrompt = event;
+          });
+          const host = window.location.hostname;
+          const isPreviewHost = host.includes("id-preview--") || host.includes("lovableproject.com");
+          const isInIframe = (() => {
+            try { return window.self !== window.top; } catch { return true; }
+          })();
+          if (!("serviceWorker" in navigator)) return;
+          if (isPreviewHost || isInIframe) {
+            navigator.serviceWorker.getRegistrations?.().then((regs) => regs.forEach((r) => r.unregister()));
+            return;
+          }
+          navigator.serviceWorker.register("/sw.js").catch(() => {});
+        } catch {}
+      })();
+    </script>
     <style>
       /* Prevent flash of unstyled SEO fallback before React hydrates.
          Googlebot executes JS and sees the React app; non-JS clients still
