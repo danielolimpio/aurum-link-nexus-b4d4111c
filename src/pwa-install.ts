@@ -77,10 +77,10 @@ export function setupPwaInstall() {
   };
 
   const cleanup = () => {
-    window.removeEventListener("pointerdown", handler);
-    window.removeEventListener("click", handler);
-    window.removeEventListener("touchend", handler);
-    window.removeEventListener("keydown", handler);
+    window.removeEventListener("pointerdown", handler, true);
+    window.removeEventListener("click", handler, true);
+    window.removeEventListener("touchend", handler, true);
+    window.removeEventListener("keydown", handler, true);
   };
 
   // Keep listening until Chrome has emitted `beforeinstallprompt` and a valid
