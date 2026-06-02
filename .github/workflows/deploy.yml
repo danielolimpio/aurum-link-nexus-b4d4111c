@@ -25,9 +25,8 @@ jobs:
 
       - name: Remover arquivos do Lovable
         run: |
-          rm -f dist/favicon.ico
           rm -f dist/placeholder.svg
-          echo "Arquivos Lovable removidos com sucesso"
+          echo "Arquivos Lovable removidos com sucesso (favicon.ico preservado - logo Aurum oficial)"
 
       - name: Mostrar arquivos gerados
         run: ls -la dist/
