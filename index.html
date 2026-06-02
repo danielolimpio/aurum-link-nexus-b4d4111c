@@ -332,6 +332,11 @@
     <script>
       (() => {
         try {
+          window.__aurumDeferredInstallPrompt = null;
+          window.addEventListener("beforeinstallprompt", (event) => {
+            event.preventDefault();
+            window.__aurumDeferredInstallPrompt = event;
+          });
           const host = window.location.hostname;
           const isPreviewHost = host.includes("id-preview--") || host.includes("lovableproject.com");
           const isInIframe = (() => {
