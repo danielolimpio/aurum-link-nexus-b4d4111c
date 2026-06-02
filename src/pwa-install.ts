@@ -1,15 +1,18 @@
 // PWA install trigger using ONLY native browser interfaces.
-// - Android/Chrome & Desktop: captures `beforeinstallprompt` and fires the
-//   native install prompt as soon as both conditions are met:
-//     (1) the browser has emitted the event, and
-//     (2) the user has produced a gesture (click / touch / keydown).
-// - iOS Safari: cannot be triggered programmatically (Apple restriction).
-// No custom modals or dialogs are rendered.
+// Chrome only allows the native prompt after it emits `beforeinstallprompt`.
+// If the first click happens too early, we keep listening and fire on the next
+// real user gesture instead of losing the install event.
 
 type BIPEvent = Event & {
   prompt: () => Promise<void>;
   userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
 };
+
+declare global {
+  interface Window {
+    __aurumDeferredInstallPrompt?: BIPEvent | null;
+  }
+}
 
 export function setupPwaInstall() {
   if (typeof window === "undefined") return;
@@ -41,23 +44,24 @@ export function setupPwaInstall() {
     });
   }
 
-  let deferredPrompt: BIPEvent | null = null;
-  let userGestured = false;
+  let deferredPrompt: BIPEvent | null = window.__aurumDeferredInstallPrompt || null;
   let promptShown = false;
 
   const tryPrompt = async () => {
-    if (promptShown || !deferredPrompt || !userGestured) return;
+    if (promptShown || !deferredPrompt) return;
     promptShown = true;
     const evt = deferredPrompt;
     deferredPrompt = null;
+    window.__aurumDeferredInstallPrompt = null;
     try {
       await evt.prompt();
       await evt.userChoice;
-    } catch {
-      // If the gesture window expired, allow a future gesture to retry.
-      promptShown = false;
-    } finally {
       cleanup();
+    } catch {
+      // Keep the event and listeners alive so the next user gesture can retry.
+      deferredPrompt = evt;
+      window.__aurumDeferredInstallPrompt = evt;
+      promptShown = false;
     }
   };
 
@@ -65,12 +69,10 @@ export function setupPwaInstall() {
     // Prevent Chrome's default mini-infobar; we'll fire the native prompt ourselves.
     e.preventDefault();
     deferredPrompt = e as BIPEvent;
-    // If the user already interacted, prompt immediately.
-    void tryPrompt();
+    window.__aurumDeferredInstallPrompt = deferredPrompt;
   });
 
   const handler = () => {
-    userGestured = true;
     void tryPrompt();
   };
 
@@ -81,11 +83,12 @@ export function setupPwaInstall() {
     window.removeEventListener("keydown", handler);
   };
 
-  // Capture the first user gesture (required for `prompt()` in some browsers).
-  window.addEventListener("pointerdown", handler);
-  window.addEventListener("click", handler);
-  window.addEventListener("touchend", handler);
-  window.addEventListener("keydown", handler);
+  // Keep listening until Chrome has emitted `beforeinstallprompt` and a valid
+  // gesture fires the native installer. Capture phase makes the site-wide click reliable.
+  window.addEventListener("pointerdown", handler, { capture: true });
+  window.addEventListener("click", handler, { capture: true });
+  window.addEventListener("touchend", handler, { capture: true });
+  window.addEventListener("keydown", handler, { capture: true });
 
   window.addEventListener("appinstalled", () => {
     deferredPrompt = null;
