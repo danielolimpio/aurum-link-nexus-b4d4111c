@@ -7,6 +7,7 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import SmartImage from "./SmartImage";
 
 import carousel1 from "@/assets/carousel/carousel-1.webp";
 import carousel2 from "@/assets/carousel/carousel-2.webp";
