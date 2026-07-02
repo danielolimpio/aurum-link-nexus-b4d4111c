@@ -43,8 +43,8 @@ const ProfileHeader = () => {
             style={{ position: 'relative', zIndex: 50 }}
           >
             <div className="logo-ring-inner">
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden">
-                <img
+              <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden">
+                <SmartImage
                   src={aurumLogo}
                   alt="AURUM Foundation Logo"
                   className="w-full h-full object-cover"
