@@ -3,6 +3,7 @@ import { ArrowUp } from "lucide-react";
 import aurumLogo from "@/assets/aurum-logo.jpg";
 import blockchainBanner from "@/assets/aurum-banner.jpg";
 import StoriesViewer from "./StoriesViewer";
+import SmartImage from "./SmartImage";
 
 const ProfileHeader = () => {
   const [isStoriesOpen, setIsStoriesOpen] = useState(false);
@@ -12,7 +13,7 @@ const ProfileHeader = () => {
       <div className="relative w-full">
         {/* Banner */}
         <div className="relative w-full overflow-hidden">
-          <img
+          <SmartImage
             src={blockchainBanner}
             alt="Blockchain Technology Background"
             className="w-full h-auto object-contain"
@@ -42,8 +43,8 @@ const ProfileHeader = () => {
             style={{ position: 'relative', zIndex: 50 }}
           >
             <div className="logo-ring-inner">
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden">
-                <img
+              <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden">
+                <SmartImage
                   src={aurumLogo}
                   alt="AURUM Foundation Logo"
                   className="w-full h-full object-cover"

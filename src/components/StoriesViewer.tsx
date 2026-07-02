@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
+import SmartImage from "./SmartImage";
 
 import story1 from "@/assets/stories/story-1.jpg";
 import story2 from "@/assets/stories/story-2.jpg";
@@ -114,7 +115,7 @@ const StoriesViewer = ({ isOpen, onClose }: StoriesViewerProps) => {
 
       {/* Story image */}
       <div className="relative w-full h-full flex items-center justify-center">
-        <img
+        <SmartImage
           src={stories[currentIndex].src}
           alt={stories[currentIndex].alt}
           className="max-h-full max-w-full object-contain"
