@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
+import SmartImage from "./SmartImage";
 
 import story1 from "@/assets/stories/story-1.jpg";
 import story2 from "@/assets/stories/story-2.jpg";
