@@ -13,7 +13,7 @@ const ProfileHeader = () => {
       <div className="relative w-full">
         {/* Banner */}
         <div className="relative w-full overflow-hidden">
-          <img
+          <SmartImage
             src={blockchainBanner}
             alt="Blockchain Technology Background"
             className="w-full h-auto object-contain"
