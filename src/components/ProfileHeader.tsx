@@ -3,6 +3,7 @@ import { ArrowUp } from "lucide-react";
 import aurumLogo from "@/assets/aurum-logo.jpg";
 import blockchainBanner from "@/assets/aurum-banner.jpg";
 import StoriesViewer from "./StoriesViewer";
+import SmartImage from "./SmartImage";
 
 const ProfileHeader = () => {
   const [isStoriesOpen, setIsStoriesOpen] = useState(false);
