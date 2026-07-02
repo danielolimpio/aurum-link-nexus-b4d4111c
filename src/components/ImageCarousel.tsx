@@ -128,10 +128,12 @@ const ImageCarousel = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-auto object-contain"
-                  loading="lazy"
+                  className="w-full h-auto object-contain bg-muted/20"
+                  loading={index < 2 ? "eager" : "lazy"}
                   decoding="async"
+                  fetchPriority={index === 0 ? "high" : "auto"}
                 />
+
 
                 
                 {/* Reflection effect */}
