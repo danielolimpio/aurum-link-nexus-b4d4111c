@@ -115,7 +115,7 @@ const StoriesViewer = ({ isOpen, onClose }: StoriesViewerProps) => {
 
       {/* Story image */}
       <div className="relative w-full h-full flex items-center justify-center">
-        <img
+        <SmartImage
           src={stories[currentIndex].src}
           alt={stories[currentIndex].alt}
           className="max-h-full max-w-full object-contain"
